@@ -776,6 +776,30 @@
 
   .form-row textarea { resize: vertical; min-height: 80px; }
 
+  #enquiry-name, #enquiry-email, #enquiry-details {
+    width: 100%;
+    padding: 14px 18px;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--cream);
+    background: rgba(250,247,242,0.08);
+    border: 1px solid rgba(184,134,11,0.35);
+    outline: none;
+    transition: border-color .2s;
+    box-sizing: border-box;
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+  }
+  #enquiry-name::placeholder, #enquiry-email::placeholder, #enquiry-details::placeholder {
+    color: rgba(250,247,242,0.4);
+  }
+  #enquiry-name:focus, #enquiry-email:focus, #enquiry-details:focus {
+    border-color: var(--gold);
+  }
+  #enquiry-details { resize: vertical; min-height: 100px; }
+
   @media (min-width: 480px) {
     .form-row-two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   }
