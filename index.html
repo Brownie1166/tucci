@@ -934,27 +934,18 @@
     </div>
 
     <div id="form-wrap">
-      <form name="interest" method="POST"   >
-        
-        
-        <div class="contact-form">
-          <div class="form-row form-row-two">
-          </div>
-          <div class="form-row">
-            <select name="interest">
-              <option value="" disabled selected>What interests you?</option>
-              <option value="Harvest Tour 2026">Harvest Tour 2026 (12 days)</option>
-              <option value="Tucci Day Experience">The Tucci Day at Michele's farm</option>
-              <option value="Both">Both</option>
-              <option value="Just keep me informed">Just keep me informed</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <textarea name="message" placeholder="Any questions or notes (optional)" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send my interest →</button>
+      <div class="contact-form">
+        <div class="form-row">
+          <input type="text" id="enquiry-name" placeholder="Your name">
         </div>
-      </form>
+        <div class="form-row">
+          <input type="email" id="enquiry-email" placeholder="Your email address">
+        </div>
+        <div class="form-row">
+          <textarea id="enquiry-details" placeholder="I am interested, tell me more — add any details or questions here..." rows="4"></textarea>
+        </div>
+        <button onclick="sendEnquiry()" class="btn-primary" style="width:100%;justify-content:center;">Send my interest →</button>
+      </div>
     </div>
     <div id="form-success" style="display:none;">
       <p style="font-family:'Cormorant Garamond',serif;font-size:26px;font-style:italic;color:var(--cream);margin-top:24px;">Thank you — we'll be in touch shortly.</p>
