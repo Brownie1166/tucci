@@ -1019,28 +1019,4 @@
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ name: name, email: email, message: details, _subject: 'Tour Enquiry — Trigu Italia' })
-    }).then(function(r) {
-      document.getElementById('form-wrap').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    }).catch(function() {
-      alert('Something went wrong. Please email us at jon@triguitalia.com');
-    });
-  }
-
-  // Fix anchor scrolling inside WordPress theme wrappers
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-      anchor.addEventListener('click', function(e) {
-        var target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var emailInput = document.getElementById('capture-email');
-    if (emailInput) {
-      emailInput.addEventList
+    }).then(function(r)
