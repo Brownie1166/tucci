@@ -1059,4 +1059,11 @@
   document.addEventListener('DOMContentLoaded', function() {
     var emailInput = document.getElementById('capture-email');
     if (emailInput) {
-      emailInput.addEventList
+      emailInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') handleCapture();
+      });
+    }
+  });
+</script>
+</body>
+</html>
