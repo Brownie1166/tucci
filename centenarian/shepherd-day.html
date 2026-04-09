@@ -115,7 +115,12 @@
   .notes-list li:last-child { border-bottom: none; }
   .notes-list li::before { content: '·'; color: var(--gold); font-size: 18px; line-height: 1.4; flex-shrink: 0; }
 
-  .booking { background: var(--warm-dark); padding: 80px 48px; text-align: center; position: relative; overflow: hidden; }
+  .contact-form { max-width: 520px; margin: 0 auto; text-align: left; }
+  .form-row { margin-bottom: 12px; }
+  .form-row input, .form-row textarea { width: 100%; padding: 14px 18px; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--cream); background: rgba(250,247,242,0.08); border: 1px solid rgba(184,134,11,0.35); outline: none; transition: border-color .2s; box-sizing: border-box; }
+  .form-row input::placeholder, .form-row textarea::placeholder { color: rgba(250,247,242,0.4); }
+  .form-row input:focus, .form-row textarea:focus { border-color: var(--gold); }
+  .form-row textarea { resize: vertical; min-height: 100px; } padding: 80px 48px; text-align: center; position: relative; overflow: hidden; }
   .booking::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(184,134,11,0.1) 0%, transparent 65%); }
   .booking-inner { position: relative; max-width: 600px; margin: 0 auto; }
   .booking-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 300; color: var(--cream); line-height: 1.15; margin-bottom: 16px; }
@@ -392,14 +397,4 @@
   </div>
 </section>
 
-<section class="booking" id="book">
-  <div class="booking-inner">
-    <span class="section-label" style="color:rgba(184,134,11,0.8)">Reserve your place</span>
-    <p class="booking-body">Every tour starts with a conversation — tell us when you want to come and we'll take care of everything else.</p>
-    <a href="/cdn-cgi/l/email-protection#e08a8f8ea094928987958994818c8981ce838f8ddf9395828a858394ddb388859088859284c5d2d793c0a59890859289858e8385c0026074c0a28f8f8b898e87c0a58e9195899299" class="hero-cta">Start a conversation →</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <span class="footer-logo">The Centenarian</span>
-  <span class=
+<section class="booking" 
