@@ -39,10 +39,18 @@
   .glance-value { font-size: 12px; font-weight: 500; letter-spacing: .05em; color: var(--cream); }
   .hero-cta { background: var(--gold); color: var(--black); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; padding: 14px 32px; border: none; cursor: pointer; transition: background .2s; text-decoration: none; display: inline-block; }
   .hero-cta:hover { background: var(--gold-light); }
-  .hero-photos { display: grid; grid-template-rows: 1fr 1fr; gap: 4px; height: 400px; }
+  .hero-photos { display: grid; grid-template-rows: 1fr; gap: 4px; height: 400px; }
   .hero-photo { background: var(--warm-mid); overflow: hidden; }
   .hero-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
   .hero-photo:hover img { transform: scale(1.04); }
+
+  /* TUCCI PHOTO STRIP */
+  .tucci-strip { display: grid; grid-template-columns: 1fr 1fr; }
+  .tucci-strip-img { overflow: hidden; height: 480px; }
+  .tucci-strip-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tucci-strip-text { background: var(--warm-mid); padding: 64px 56px; display: flex; flex-direction: column; justify-content: center; }
+  .tucci-strip-eyebrow { font-size: 9px; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; color: rgba(184,134,11,0.7); margin-bottom: 20px; display: block; }
+  .tucci-strip-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 56px); font-weight: 300; font-style: italic; color: var(--cream); line-height: 1.1; }
 
   .overview-strip { background: var(--gold-pale); padding: 56px 48px; border-bottom: 1px solid rgba(184,134,11,0.2); }
   .overview-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 64px; align-items: start; }
@@ -115,27 +123,49 @@
   .notes-list li:last-child { border-bottom: none; }
   .notes-list li::before { content: '·'; color: var(--gold); font-size: 18px; line-height: 1.4; flex-shrink: 0; }
 
-  .contact-form { max-width: 520px; margin: 0 auto; text-align: left; }
-  .form-row { margin-bottom: 12px; }
-  .form-row input, .form-row textarea { width: 100%; padding: 14px 18px; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--cream); background: rgba(250,247,242,0.08); border: 1px solid rgba(184,134,11,0.35); outline: none; transition: border-color .2s; box-sizing: border-box; }
-  .form-row input::placeholder, .form-row textarea::placeholder { color: rgba(250,247,242,0.4); }
-  .form-row input:focus, .form-row textarea:focus { border-color: var(--gold); }
-  .form-row textarea { resize: vertical; min-height: 100px; } padding: 80px 48px; text-align: center; position: relative; overflow: hidden; }
+  /* VIDEOS */
+  .videos { background: var(--black); padding: 80px 48px; }
+  .videos-inner { max-width: 1100px; margin: 0 auto; }
+  .videos-label { font-size: 10px; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: rgba(184,134,11,0.8); margin-bottom: 24px; display: block; }
+  .videos-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 300; color: var(--cream); line-height: 1.12; margin-bottom: 48px; }
+  .videos-title em { font-style: italic; color: var(--gold-light); }
+  .videos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .video-caption { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(184,134,11,0.7); margin-bottom: 14px; display: block; }
+  .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: var(--warm-mid); }
+  .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+  .booking { background: var(--warm-dark); padding: 80px 48px; text-align: center; position: relative; overflow: hidden; }
   .booking::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(184,134,11,0.1) 0%, transparent 65%); }
   .booking-inner { position: relative; max-width: 600px; margin: 0 auto; }
   .booking-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 300; color: var(--cream); line-height: 1.15; margin-bottom: 16px; }
   .booking-title em { font-style: italic; color: var(--gold-light); }
   .booking-body { font-size: 15px; font-weight: 300; color: rgba(250,247,242,0.6); line-height: 1.8; margin-bottom: 36px; }
+  .contact-form { max-width: 520px; margin: 0 auto; text-align: left; }
+  .form-row { margin-bottom: 12px; }
+  .form-row input, .form-row textarea { width: 100%; padding: 14px 18px; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--cream); background: rgba(250,247,242,0.08); border: 1px solid rgba(184,134,11,0.35); outline: none; transition: border-color .2s; box-sizing: border-box; }
+  .form-row input::placeholder, .form-row textarea::placeholder { color: rgba(250,247,242,0.4); }
+  .form-row input:focus, .form-row textarea:focus { border-color: var(--gold); }
+  .form-row textarea { resize: vertical; min-height: 100px; }
+  .btn-gold { background: var(--gold); color: var(--black); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; padding: 16px 40px; border: none; cursor: pointer; transition: background .2s; width: 100%; margin-top: 4px; }
+  .btn-gold:hover { background: var(--gold-light); }
 
   .footer { background: var(--black); padding: 40px 48px; display: flex; justify-content: space-between; align-items: center; }
   .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; letter-spacing: .3em; text-transform: uppercase; color: var(--cream); }
+  .footer-links { display: flex; gap: 28px; }
+  .footer-links a { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: var(--gold); }
   .footer-copy { font-size: 11px; color: rgba(140,123,107,0.5); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
   @media (max-width: 900px) {
     .nav { padding: 16px 24px; }
     .hero { padding: 56px 24px 48px; }
     .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-    .hero-photos { height: 220px; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
+    .hero-photos { height: 220px; }
+    .tucci-strip { grid-template-columns: 1fr; }
+    .tucci-strip-img { height: 280px; }
+    .tucci-strip-text { padding: 40px 24px; }
     .overview-strip { padding: 40px 24px; }
     .overview-inner { grid-template-columns: 1fr; gap: 32px; }
     .stops { padding: 48px 24px; }
@@ -143,27 +173,29 @@
     .stop-aside { display: none; }
     .michele-section { padding: 56px 24px; }
     .michele-inner { grid-template-columns: 1fr; gap: 40px; }
-    .michele-image { aspect-ratio: 16/9; }
     .map-section { padding: 0 24px 56px; }
     .practical { padding: 48px 24px; }
     .practical-inner { grid-template-columns: 1fr; gap: 40px; }
     .info-grid { grid-template-columns: 1fr 1fr; }
+    .videos { padding: 56px 24px; }
+    .videos-grid { grid-template-columns: 1fr; }
     .booking { padding: 64px 24px; }
-    .footer { padding: 32px 24px; flex-direction: column; gap: 12px; text-align: center; }
+    .footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
   }
 </style>
 </head>
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-logo">The Centenarian</a>
-  <a href="index.html" class="nav-back">← All experiences</a>
+  <a href="/" class="nav-logo">The Centenarian</a>
+  <a href="/" class="nav-back">← All experiences</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <span class="hero-sub">Farm · Dairy · Cheese · Table</span>
+      <span class="hero-sub">Farm · Dairy · Cheese · Table &nbsp;·&nbsp; As seen on Tucci in Italy · Disney · National Geographic</span>
       <h1 class="hero-title"><em>The Shepherd's<br>Experience</em></h1>
       <p class="hero-route">Cagliari → Gonnostramatza → Fattoria Cuscusa</p>
       <p class="hero-route">40 minutes from Cagliari each way</p>
@@ -175,7 +207,7 @@
       </div>
       <a href="#book" class="hero-cta">Book this experience →</a>
     </div>
-    <div class="hero-photos" style="grid-template-rows: 1fr;">
+    <div class="hero-photos">
       <div class="hero-photo">
         <img src="webflow_jon_michele_farm.jpg" alt="Michele Cuscusa and Jon Brownstein at the farm">
       </div>
@@ -183,6 +215,18 @@
   </div>
 </section>
 
+<!-- STANLEY TUCCI DAY -->
+<div class="tucci-strip">
+  <div class="tucci-strip-img">
+    <img src="../tuccijonmichele.jpg" alt="Stanley Tucci Day at Fattoria Cuscusa">
+  </div>
+  <div class="tucci-strip-text">
+    <span class="tucci-strip-eyebrow">Tucci in Italy · Season 2 · Disney · National Geographic</span>
+    <h2 class="tucci-strip-title">Stanley Tucci Day</h2>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
 <section class="overview-strip">
   <div class="overview-inner">
     <div>
@@ -214,6 +258,7 @@
   </div>
 </section>
 
+<!-- STOPS -->
 <section class="stops">
   <div class="stops-header">
     <span class="section-label">The day in detail</span>
@@ -320,6 +365,7 @@
   </div>
 </section>
 
+<!-- MICHELE -->
 <section class="michele-section">
   <div class="michele-inner">
     <div>
@@ -332,6 +378,7 @@
         <li>Cannonau from his own vines</li>
         <li>Nearly 100 products from his dairy</li>
         <li>Gonnostramatza, Medio Campidano</li>
+        <li>As seen on Tucci in Italy · Disney · National Geographic</li>
       </ul>
     </div>
     <div class="michele-image">
@@ -340,6 +387,7 @@
   </div>
 </section>
 
+<!-- MAP -->
 <section class="map-section">
   <div class="map-inner">
     <div class="map-header">
@@ -349,52 +397,4 @@
       </div>
       <span class="map-subtitle">~60km from Cagliari · Full day</span>
     </div>
-    <iframe
-      class="map-embed"
-      src="https://www.google.com/maps/embed?pb=!1m28!1m8!1m3!1d195386.6!2d8.95!3d39.45!3m2!1i1024!2i768!4f13.1!4m17!3e0!4m5!1s0x12e734dd31e98e21%3A0x5f5d1c93f0a2c1b1!2sCagliari%2C%20Sardinia!3m2!1d39.2238!2d9.1217!4m5!1s0x12e6b5e6d7c8a9b0%3A0x1!2sGonnostramatza%2C%20Sardinia!3m2!1d39.5667!2d8.8333!5e0!3m2!1sen!2sit!4v1700000000001"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-    <div class="map-route-strip">
-      <div class="map-stop"><div class="map-stop-dot"></div><span class="map-stop-name">Cagliari</span></div>
-      <span class="map-stop-arrow">→</span>
-      <div class="map-stop"><div class="map-stop-dot"></div><span class="map-stop-name">Gonnostramatza</span></div>
-      <span class="map-stop-arrow">→</span>
-      <div class="map-stop"><div class="map-stop-dot"></div><span class="map-stop-name">Fattoria Cuscusa</span></div>
-      <span class="map-stop-arrow">→</span>
-      <div class="map-stop"><div class="map-stop-dot"></div><span class="map-stop-name">Cagliari</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="practical">
-  <div class="practical-inner">
-    <div>
-      <span class="section-label">Practical information</span>
-      <h2 class="practical-title">What you need to know</h2>
-      <div class="info-grid">
-        <div class="info-card"><span class="info-card-label">Duration</span><div class="info-card-value">Full day</div><div class="info-card-note">Departs Cagliari ~9am, returns ~6pm</div></div>
-        <div class="info-card"><span class="info-card-label">Group size</span><div class="info-card-value">Up to 8</div><div class="info-card-note">Private groups available on request</div></div>
-        <div class="info-card"><span class="info-card-label">Languages</span><div class="info-card-value">IT / EN</div><div class="info-card-note">Fully guided in both languages</div></div>
-        <div class="info-card"><span class="info-card-label">Included</span><div class="info-card-value">All inclusive</div><div class="info-card-note">Driver, guide, all activities and meals</div></div>
-        <div class="info-card"><span class="info-card-label">Season</span><div class="info-card-value">Year round</div><div class="info-card-note">Every season offers something different</div></div>
-        <div class="info-card"><span class="info-card-label">Departure</span><div class="info-card-value">Cagliari</div><div class="info-card-note">Hotel pickup available</div></div>
-      </div>
-    </div>
-    <div>
-      <span class="section-label">Notes</span>
-      <h2 class="practical-title">Good to know</h2>
-      <ul class="notes-list">
-        <li>Wear comfortable shoes suitable for a working farm — some areas are uneven ground</li>
-        <li>Bring a layer — mornings on the farm can be cool even in summer</li>
-        <li>The dairy environment involves animal milk — please advise of any allergies at booking</li>
-        <li>Dietary requirements for lunch should be shared at time of booking</li>
-        <li>Non-alcoholic alternatives are available for the wine tasting — just ask</li>
-        <li>This experience is available as a standalone day or as part of the 12-day Harvest Intensive</li>
-        <li>Private bookings for families or groups welcome — contact us to discuss</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="booking" 
+    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m28!1m8!1m3!1d195386.6!2d8.95!3d39.45!3m2!1i1024!2i768!4f13.1!4m17!3e0!4m5!1s0x12e734dd31e98e21%3A0x5f5d1c93f0a2c1b1!2sCagliari%2
