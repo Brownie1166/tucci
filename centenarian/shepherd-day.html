@@ -457,15 +457,14 @@
     <span class="section-label" style="color:rgba(184,134,11,0.8)">Reserve your place</span>
     <h2 class="booking-title"><em>Join us<br>at the farm</em></h2>
     <p class="booking-body">Send us a message and we'll be in touch to confirm availability and details.</p>
-    <div class="contact-form" id="form-wrap">
-      <div class="form-row"><input type="text" id="book-name" placeholder="Your name"></div>
-      <div class="form-row"><input type="email" id="book-email" placeholder="Your email address"></div>
-      <div class="form-row"><textarea id="book-message" rows="3" placeholder="Tell us when you'd like to come and anything else we should know"></textarea></div>
-      <button class="btn-gold" onclick="sendBooking()">Send my interest →</button>
-    </div>
-    <div id="form-success" style="display:none;margin-top:24px;">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--cream);">Thank you — we'll be in touch shortly.</p>
-    </div>
+    <form class="contact-form" action="https://formspree.io/f/mkopevbo" method="POST">
+      <div class="form-row"><input type="text" name="name" placeholder="Your name"></div>
+      <div class="form-row"><input type="email" name="email" placeholder="Your email address" required></div>
+      <div class="form-row"><textarea name="message" rows="3" placeholder="Tell us when you'd like to come and anything else we should know"></textarea></div>
+      <input type="hidden" name="_subject" value="Shepherd's Experience Enquiry — The Centenerian">
+      <input type="hidden" name="_next" value="https://thecentenerian.com/centenarian/shepherd-day.html?sent=true">
+      <button type="submit" class="btn-gold">Send my interest →</button>
+    </form>
   </div>
 </section>
 
@@ -486,4 +485,11 @@ function sendBooking() {
   var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email || !re.test(email)) { document.getElementById('book-email').style.borderColor='#c0392b'; document.getElementById('book-email').focus(); return; }
   if (!message) message = "I am interested in the Shepherd's Experience.";
-  fetch('https://formspree.io/f/mkopevbo', { method:'POST', headers:{'Content-Type':'application/json','Accept':'application
+  fetch('https://formspree.io/f/mkopevbo', { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({name:name,email:email,message:message,_subject:"Shepherd's Experience Enquiry — The Centenerian"}) })
+  .then(function() { document.getElementById('form-wrap').style.display='none'; document.getElementById('form-success').style.display='block'; })
+  .catch(function() { alert('Something went wrong. Please email jon@triguitalia.com'); });
+}
+</script>
+
+</body>
+</html>
