@@ -413,32 +413,17 @@
     <span class="cta-label">Every tour starts with a conversation</span>
     <h2 class="cta-title"><em>Tell us what<br>you're looking for.</em></h2>
     <p class="cta-body">Not a form with fifteen fields — a real conversation about who you are, what matters to you, and when you want to come. We'll build something around that. We take a maximum of ten guests per tour. Most dates fill through word of mouth.</p>
-    <div id="form-wrap" style="max-width:480px;margin:0 auto;">
-      <div style="margin-bottom:12px;"><input type="text" id="enquiry-name" placeholder="Your name" style="width:100%;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:var(--text-body);background:white;border:1px solid rgba(184,134,11,0.35);outline:none;box-sizing:border-box;"></div>
-      <div style="margin-bottom:12px;"><input type="email" id="enquiry-email" placeholder="Your email address" style="width:100%;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:var(--text-body);background:white;border:1px solid rgba(184,134,11,0.35);outline:none;box-sizing:border-box;"></div>
-      <div style="margin-bottom:16px;"><textarea id="enquiry-message" rows="4" placeholder="Tell us what you're looking for..." style="width:100%;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:var(--text-body);background:white;border:1px solid rgba(184,134,11,0.35);outline:none;box-sizing:border-box;resize:vertical;"></textarea></div>
-      <button onclick="sendEnquiry()" class="btn-primary" style="width:100%;">Send →</button>
-    </div>
-    <div id="form-success" style="display:none;margin-top:24px;">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--warm-dark);">Thank you — we'll be in touch shortly.</p>
-    </div>
+    <form action="https://formspree.io/f/mkopevbo" method="POST" style="max-width:480px;margin:0 auto;">
+      <div style="margin-bottom:12px;"><input type="text" name="name" placeholder="Your name" style="width:100%;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:var(--text-body);background:white;border:1px solid rgba(184,134,11,0.35);outline:none;box-sizing:border-box;"></div>
+      <div style="margin-bottom:12px;"><input type="email" name="email" placeholder="Your email address" required style="width:100%;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:var(--text-body);background:white;border:1px solid rgba(184,134,11,0.35);outline:none;box-sizing:border-box;"></div>
+      <div style="margin-bottom:16px;"><textarea name="message" rows="4" placeholder="Tell us what you're looking for..." style="width:100%;padding:14px 18px;font-family:'Jost',sans-serif;font-size:14px;font-weight:300;color:var(--text-body);background:white;border:1px solid rgba(184,134,11,0.35);outline:none;box-sizing:border-box;resize:vertical;"></textarea></div>
+      <input type="hidden" name="_subject" value="Tour Enquiry — The Centenerian">
+      <input type="hidden" name="_next" value="https://thecentenerian.com/?sent=true">
+      <button type="submit" class="btn-primary" style="width:100%;">Send →</button>
+    </form>
     <p class="cta-note" style="margin-top:20px;">Or email <a href="mailto:jon@triguitalia.com" style="color:var(--gold);text-decoration:none;">jon@triguitalia.com</a> directly</p>
   </div>
 </section>
-
-<script>
-function sendEnquiry() {
-  var name = document.getElementById('enquiry-name').value.trim();
-  var email = document.getElementById('enquiry-email').value.trim();
-  var message = document.getElementById('enquiry-message').value.trim();
-  var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email || !re.test(email)) { document.getElementById('enquiry-email').style.borderColor='#c0392b'; document.getElementById('enquiry-email').focus(); return; }
-  if (!message) message = 'I am interested, tell me more.';
-  fetch('https://formspree.io/f/mkopevbo', { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({name:name,email:email,message:message,_subject:'Tour Enquiry — The Centenerian'}) })
-  .then(function() { document.getElementById('form-wrap').style.display='none'; document.getElementById('form-success').style.display='block'; })
-  .catch(function() { alert('Something went wrong. Please email jon@triguitalia.com'); });
-}
-</script>
 
 <footer class="footer">
   <span class="footer-logo">The Centenarian</span>
