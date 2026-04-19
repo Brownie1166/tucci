@@ -388,7 +388,7 @@
       </div>
       <span class="map-subtitle">~60km from Cagliari · Full day</span>
     </div>
-    <iframe class="map-embed" src="https://maps.google.com/maps?q=Gonnostramatza,+Sud+Sardegna,+Italy&t=&z=11&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
+    <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d394342.3171817357!2d8.628071915718209!3d39.451266831829024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x12e73415b68e1ca3%3A0x201e1506cf816eb1!2sCagliari%2C%20Metropolitan%20City%20of%20Cagliari!3m2!1d39.2237323!2d9.1217194!4m5!1s0x12dd8ad45007ad13%3A0xb189dc4ed605a64a!2sGonnostramatza%2C%2009093%20Province%20of%20Oristano!3m2!1d39.6813636!2d8.833281!5e0!3m2!1sen!2sit!4v1776609134053!5m2!1sen!2sit" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="map-route-strip">
       <div class="map-stop"><div class="map-stop-dot"></div><span class="map-stop-name">Cagliari</span></div>
       <span class="map-stop-arrow">→</span>
@@ -486,11 +486,4 @@ function sendBooking() {
   var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email || !re.test(email)) { document.getElementById('book-email').style.borderColor='#c0392b'; document.getElementById('book-email').focus(); return; }
   if (!message) message = "I am interested in the Shepherd's Experience.";
-  fetch('https://formspree.io/f/mkopevbo', { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({name:name,email:email,message:message,_subject:"Shepherd's Experience Enquiry — The Centenerian"}) })
-  .then(function() { document.getElementById('form-wrap').style.display='none'; document.getElementById('form-success').style.display='block'; })
-  .catch(function() { alert('Something went wrong. Please email jon@triguitalia.com'); });
-}
-</script>
-
-</body>
-</html>
+  fetch('https://formspree.io/f/mkopevbo', { method:'POST', headers:{'Content-Type':'application/json','Accept':'ap
