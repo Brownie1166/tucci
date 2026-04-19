@@ -67,7 +67,7 @@
   .stop { display: grid; grid-template-columns: 80px 1fr 340px; gap: 0; margin-bottom: 2px; background: white; border: 1px solid rgba(184,134,11,0.12); transition: border-color .2s; }
   .stop:hover { border-color: rgba(184,134,11,0.35); }
   .stop-num-col { background: var(--warm-dark); display: flex; align-items: flex-start; justify-content: center; padding: 40px 0 0; }
-  .stop-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: rgba(184,134,11,0.4); line-height: 1; }
+  .stop-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--gold); line-height: 1; }
   .stop-content { padding: 36px 40px; border-right: 1px solid rgba(184,134,11,0.1); }
   .stop-time { font-size: 10px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
   .stop-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; color: var(--warm-dark); margin-bottom: 6px; }
@@ -486,4 +486,4 @@ function sendBooking() {
   var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email || !re.test(email)) { document.getElementById('book-email').style.borderColor='#c0392b'; document.getElementById('book-email').focus(); return; }
   if (!message) message = "I am interested in the Shepherd's Experience.";
-  fetch('https://formspree.io/f/mkopevbo', { method:'POST', headers:{'Content-Type':'application/json','Accept':'ap
+  fetch('https://formspree.io/f/mkopevbo', { method:'POST', headers:{'Content-Type':'application/json','Accept':'application
