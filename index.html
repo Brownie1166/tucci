@@ -122,6 +122,7 @@
   .how-note { text-align: center; margin-top: 56px; }
   .how-note p { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; font-weight: 300; color: var(--warm-dark); }
 
+  /* PEOPLE / JON BROWNSTEIN */
   .people { padding: 120px 80px; max-width: 1300px; margin: 0 auto; }
   .people-header { margin-bottom: 72px; }
   .people-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 52px); font-weight: 300; color: var(--warm-dark); }
@@ -152,6 +153,14 @@
   .cta-title em { font-style: italic; color: var(--gold); }
   .cta-body { font-size: 16px; font-weight: 300; line-height: 1.85; color: var(--text-muted); margin-bottom: 48px; max-width: 520px; margin-left: auto; margin-right: auto; }
   .cta-note { font-size: 12px; letter-spacing: .1em; color: var(--text-muted); margin-top: 20px; }
+
+  /* CONTACT FORM */
+  .contact-form-wrap { max-width: 520px; margin: 0 auto; text-align: left; }
+  .contact-form-wrap input,
+  .contact-form-wrap textarea { width: 100%; padding: 14px 18px; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-body); background: white; border: 1px solid rgba(184,134,11,0.3); outline: none; box-sizing: border-box; margin-bottom: 12px; transition: border-color .2s; }
+  .contact-form-wrap input:focus,
+  .contact-form-wrap textarea:focus { border-color: var(--gold); }
+  .contact-form-wrap textarea { resize: vertical; min-height: 100px; }
 
   .footer { background: var(--black); padding: 56px 80px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
   .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; letter-spacing: .35em; color: var(--cream); text-transform: uppercase; }
@@ -203,6 +212,7 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
     <img src="sheepvineyard.jpg" alt="Sardinia">
@@ -222,6 +232,7 @@
   </a>
 </section>
 
+<!-- JON BROWNSTEIN INTRO QUOTE -->
 <section style="background:var(--warm-dark);padding:100px 80px;">
   <div style="max-width:860px;margin:0 auto;text-align:center;">
     <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;font-style:italic;color:var(--cream);line-height:1.7;margin-bottom:48px;">In 1990 I followed a stranger's suggestion and got on a plane. Within days, a group of strangers took me to the east coast — wild limestone cliffs, water so clear it seemed invented, wild boar ragù arriving by Boston whaler every afternoon.<br><br>That was 35 years ago. I have two Sardinian sons. I know every corner of this island — the shepherds, the winemakers, the grandmothers who make pastas that exist nowhere else, the centenarians who will tell you exactly why they're still here.</p>
@@ -229,13 +240,12 @@
   </div>
 </section>
 
+<!-- THE ISLAND -->
 <section class="island" id="island">
   <div class="island-inner">
     <div>
       <span class="island-label">The island</span>
       <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.5vw,28px);font-weight:300;font-style:italic;color:var(--cream);line-height:1.6;">Sardinia is almost as large as Sicily but has five times fewer people. It has four distinct languages, each rooted in a different corner of the island's ancient past. Its culture — shepherding, winemaking, artisan food, a relationship with land that goes back six thousand years — produces something rare: a place where family, community and the rhythm of the seasons still come before everything else.</p>
-
-
     </div>
     <div class="island-image">
       <img src="grouplagoon.jpg" alt="Group at the lagoon">
@@ -243,6 +253,7 @@
   </div>
 </section>
 
+<!-- EXPERIENCES -->
 <section class="experiences" id="experiences">
   <div class="experiences-header">
     <h2 class="experiences-title">Every tour is<br><em>custom built.</em></h2>
@@ -250,7 +261,7 @@
   </div>
   <div class="exp-grid">
 
-    <!-- FEATURED — Tucci photo, updated tag -->
+    <!-- 01 FEATURED -->
     <div class="exp-card featured">
       <div class="exp-card-image">
         <img src="centenarian/webflow_jon_michele_farm.jpg" alt="Jon Brownstein and Michele Cuscusa at Fattoria Cuscusa">
@@ -264,6 +275,7 @@
       </div>
     </div>
 
+    <!-- 02 -->
     <div class="exp-card">
       <span class="exp-num">02</span>
       <span class="exp-tag">Most popular · 10–12 days</span>
@@ -271,6 +283,8 @@
       <p class="exp-body">We divide the island into 4 quadrants and stay 2 to 3 nights in each. Sardegna 360 covers the fundamentals of Sardinia — the terroir, the archaeology, a bit of hiking, beach combing and wine, cheese and olive oil.</p>
       <a href="#contact" class="exp-link">Start with a conversation →</a>
     </div>
+
+    <!-- 03 -->
     <div class="exp-card">
       <span class="exp-num">03</span>
       <span class="exp-tag">For golfers · 4–10 days</span>
@@ -278,6 +292,8 @@
       <p class="exp-body">Imagine playing golf in the morning alone on spectacular golf courses with the constant breeze and view of the Mediterranean sea, and visiting a vineyard and eating the best meal of your life in the evening. That is golf in Sardegna.</p>
       <a href="#contact" class="exp-link">Handicap optional. Appetite required. →</a>
     </div>
+
+    <!-- 04 -->
     <div class="exp-card">
       <span class="exp-num">04</span>
       <span class="exp-tag">For food lovers</span>
@@ -285,8 +301,199 @@
       <p class="exp-body">Travel to the towns of Sardinia's rarest pastas — Filindeu, Lorighittas, Culurgiones — and make them with the grandmothers who carry the tradition. Not cooking classes. Afternoons in someone's home.</p>
       <a href="#contact" class="exp-link">Enquire →</a>
     </div>
+
+    <!-- 05 -->
     <div class="exp-card">
       <span class="exp-num">05</span>
-      <span class="exp-tag">For the curious</span>
+      <span class="exp-tag">Blue Zone · Longevity · Mountains</span>
       <h3 class="exp-title">The Healthy Centenarian Tour</h3>
- 
+      <p class="exp-body">Meet the people of central Sardinia who live past 100. Study their wine, food, rhythm and outlook. Walk the Barbagia highlands. Come home changed.</p>
+      <a href="#contact" class="exp-link">Enquire →</a>
+    </div>
+
+    <!-- 06 -->
+    <div class="exp-card">
+      <span class="exp-num">06</span>
+      <span class="exp-tag">Murals · Stone · Pottery · Table</span>
+      <h3 class="exp-title">An Artisan Day</h3>
+      <p class="exp-body">From the painted walls of San Sperate to Sciola's sound garden, to Ada's table and Walter Usai's pottery wheel in Assemini.</p>
+      <a href="#contact" class="exp-link">Enquire →</a>
+    </div>
+
+    <!-- 07 -->
+    <div class="exp-card">
+      <span class="exp-num">07</span>
+      <span class="exp-tag">Custom · Fully bespoke</span>
+      <h3 class="exp-title">Your Tour</h3>
+      <p class="exp-body">After a one-hour conversation we build your itinerary from scratch — around who you are, what you love, and what you've never done before. No two are alike.</p>
+      <a href="#contact" class="exp-link">Start with a conversation →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="videos">
+  <div class="videos-inner">
+    <span class="videos-label">The island on film</span>
+    <h2 class="videos-title">See <em>Sardinia</em><br>as it really is.</h2>
+    <div class="videos-grid">
+      <div>
+        <span class="video-caption">The Shepherd's Experience — Michele Cuscusa</span>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/placeholder1" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div>
+        <span class="video-caption">Sardinia — A place that changes people</span>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/placeholder2" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <h2 class="how-title">Three ways to<br><em>travel with us.</em></h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <span class="how-card-num">I</span>
+        <h3 class="how-card-title">Full guide &amp; driver</h3>
+        <p class="how-card-body">Jon with you, full time. We build your custom itinerary and travel the island with you. Everything arranged, nothing to think about.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-card-num">II</span>
+        <h3 class="how-card-title">You drive, we guide</h3>
+        <p class="how-card-body">Same itinerary, you drive. Available 9am–8pm on WhatsApp and 24 hours for emergencies.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-card-num">III</span>
+        <h3 class="how-card-title">Itinerary only</h3>
+        <p class="how-card-body">We build your perfect itinerary and make all the bookings. You travel independently with our network behind you.</p>
+      </div>
+    </div>
+    <div class="how-note">
+      <p>Every tour starts with a conversation. Most dates fill through word of mouth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE — JON BROWNSTEIN -->
+<section class="people" id="people">
+  <div class="people-header">
+    <h2 class="people-title">Who <em>we are.</em></h2>
+  </div>
+  <div class="person">
+    <div class="person-image">
+      <img src="jonbrownstein.jpg" alt="Jon Brownstein">
+    </div>
+    <div>
+      <span class="person-label">Founder &amp; Guide</span>
+      <h3 class="person-name">Jon <em>Brownstein</em></h3>
+      <p class="person-body">In 1990, Jon followed a stranger's suggestion and got on a plane to Sardinia. Within days he was on the east coast — wild limestone cliffs, water so clear it seemed invented, wild boar ragù arriving by Boston whaler every afternoon. He never really left.</p>
+      <p class="person-body">Thirty-five years later, Jon has two Sardinian sons, a deep network of shepherds, winemakers, cheesemakers and centenarians, and an encyclopedic knowledge of every corner of the island. He has been building custom tours since 2014 under the Trigu Italia name.</p>
+      <p class="person-detail">Jon leads every tour personally. Groups are small by design — a maximum of ten guests — so that every experience remains genuine, unhurried and rooted in real relationships rather than tourism infrastructure.</p>
+      <div style="margin-top:32px;padding-top:32px;border-top:1px solid rgba(184,134,11,0.2);display:flex;gap:48px;">
+        <div>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--warm-dark);display:block;line-height:1;margin-bottom:6px;">35</span>
+          <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);">Years in Sardinia</span>
+        </div>
+        <div>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--warm-dark);display:block;line-height:1;margin-bottom:6px;">10</span>
+          <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);">Max guests per tour</span>
+        </div>
+        <div>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--warm-dark);display:block;line-height:1;margin-bottom:6px;">2014</span>
+          <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);">Trigu Italia founded</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLUE ZONE -->
+<section class="box-section">
+  <div class="box-inner">
+    <div>
+      <span class="box-label">The Blue Zone</span>
+      <h2 class="box-title">Where people<br><em>live past 100.</em></h2>
+      <p class="box-body">Sardinia's Barbagia highlands are one of the world's five Blue Zones — places where an unusual concentration of people live past 100 in good health. The reasons aren't mysterious: a diet close to the land, daily movement, strong community ties, and a relationship with time that has no word for hurry.</p>
+      <p class="box-body">The Centenarian Tour takes you to meet them. Not as curiosities — as teachers.</p>
+      <a href="#contact" class="btn-primary" style="display:inline-block;">Enquire about this tour →</a>
+    </div>
+    <div class="box-image">
+      <span class="box-image-placeholder">Image: Barbagia highlands</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <span class="cta-label">Every tour starts with a conversation</span>
+    <h2 class="cta-title"><em>Tell us what<br>you're looking for.</em></h2>
+    <p class="cta-body">We take a maximum of ten guests per tour. Most dates fill through word of mouth. If you're reading this, now is a good time to reach out.</p>
+
+    <div class="contact-form-wrap" id="form-wrap">
+      <input type="text" id="enquiry-name" placeholder="Your name">
+      <input type="email" id="enquiry-email" placeholder="Your email address">
+      <textarea id="enquiry-details" placeholder="I am interested, tell me more — add any details or questions here..." rows="4"></textarea>
+      <button onclick="sendEnquiry()" class="btn-primary" style="width:100%;">Send my interest →</button>
+    </div>
+    <div id="form-success" style="display:none;">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:26px;font-style:italic;color:var(--warm-dark);margin-top:24px;">Thank you — we'll be in touch shortly.</p>
+    </div>
+    <p class="cta-note">Or email directly: <a href="mailto:jon@triguitalia.com" style="color:var(--gold);text-decoration:none;">jon@triguitalia.com</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span class="footer-logo">The Centenarian</span>
+  <div class="footer-links">
+    <a href="#experiences">Experiences</a>
+    <a href="#people">Who we are</a>
+    <a href="#how">How it works</a>
+    <a href="mailto:jon@triguitalia.com">Contact</a>
+  </div>
+  <span class="footer-copy">© 2026 Trigu Italia · Sardinia · Est. 2014</span>
+</footer>
+
+<script>
+  // Sticky nav background on scroll
+  window.addEventListener('scroll', function() {
+    var nav = document.querySelector('.nav');
+    if (window.scrollY > 80) {
+      nav.style.background = 'rgba(26,22,18,0.97)';
+    } else {
+      nav.style.background = 'linear-gradient(to bottom, rgba(26,22,18,0.9), transparent)';
+    }
+  });
+
+  // Enquiry form
+  function sendEnquiry() {
+    var name = document.getElementById('enquiry-name').value.trim();
+    var email = document.getElementById('enquiry-email').value.trim();
+    var details = document.getElementById('enquiry-details').value.trim();
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !re.test(email)) {
+      document.getElementById('enquiry-email').style.borderColor = '#c0392b';
+      document.getElementById('enquiry-email').focus();
+      return;
+    }
+    if (!details) details = 'I am interested, tell me more.';
+    fetch('https://formspree.io/f/mkopevbo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, message: details, _subject: 'Tour Enquiry — The Centenarian' })
+    })
+    .then(function() {
+      document.getElementById('form-wrap').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    })
+    
