@@ -40,24 +40,19 @@
   .nav-back:hover { color: var(--gold); }
 
   /* HERO */
-  .hero { min-height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 120px 80px 80px; overflow: hidden; }
+  .hero { min-height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 100px; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; z-index: 0; background: var(--warm-dark); }
-  .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; opacity: 0.25; }
-  .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.7) 50%, rgba(13,13,13,0.3) 100%); }
-  .hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 1300px; width: 100%; }
-  .hero-content { }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; opacity: 0.55; }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,13,13,0.97) 0%, rgba(13,13,13,0.5) 45%, rgba(13,13,13,0.1) 100%); }
+  .hero-content { position: relative; z-index: 2; max-width: 780px; }
   .hero-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; display: block; opacity: 0; animation: fadeUp .7s ease .2s forwards; }
-  .hero-announce { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 2.8vw, 36px); font-weight: 300; color: var(--gold-light); line-height: 1.3; margin-bottom: 24px; opacity: 0; animation: fadeUp .7s ease .3s forwards; }
-  .hero-announce em { font-style: italic; color: var(--gold-light); font-size: 1.15em; }
-  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 6vw, 84px); font-weight: 300; color: var(--cream); line-height: 1.02; margin-bottom: 24px; opacity: 0; animation: fadeUp .9s ease .4s forwards; }
+  .hero-announce { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 40px); font-weight: 300; color: var(--gold-light); line-height: 1.3; margin-bottom: 24px; opacity: 0; animation: fadeUp .7s ease .3s forwards; }
+  .hero-announce em { font-style: italic; font-size: 1.1em; color: var(--cream); }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 7vw, 96px); font-weight: 300; color: var(--cream); line-height: 1.02; margin-bottom: 24px; opacity: 0; animation: fadeUp .9s ease .4s forwards; }
   .hero-title em { font-style: italic; color: var(--gold-light); }
-  .hero-sub { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(250,247,242,0.55); margin-bottom: 40px; opacity: 0; animation: fadeUp .8s ease .6s forwards; }
+  .hero-sub { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(250,247,242,0.6); max-width: 600px; margin-bottom: 40px; opacity: 0; animation: fadeUp .8s ease .6s forwards; }
   .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp .8s ease .8s forwards; }
-  .hero-photos { opacity: 0; animation: fadeUp .9s ease .5s forwards; }
-  .hero-photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-  .hero-photo-item { overflow: hidden; aspect-ratio: 3/4; }
   .hero-photo-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform .6s; }
-  .hero-photo-item:hover img { transform: scale(1.04); }
 
   .btn-gold { background: var(--gold); color: var(--black); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; padding: 18px 42px; text-decoration: none; transition: background .2s, transform .15s; display: inline-block; cursor: pointer; border: none; }
   .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
@@ -66,10 +61,7 @@
   .btn-outline-dark { border: 1px solid rgba(184,134,11,0.4); color: var(--gold); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; padding: 16px 36px; text-decoration: none; transition: border-color .2s, background .2s; display: inline-block; }
   .btn-outline-dark:hover { border-color: var(--gold); background: rgba(184,134,11,0.08); }
   /* PHOTO STRIP */
-  .photo-strip { background: var(--black); padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
-  .photo-strip-item { overflow: hidden; aspect-ratio: 3/4; }
   .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .6s; display: block; }
-  .photo-strip-item:hover img { transform: scale(1.04); }
 
   /* WHAT HAPPENED */
   .happened { background: var(--warm-dark); padding: 110px 80px; }
@@ -149,11 +141,8 @@
   @media (max-width: 900px) {
     .nav { padding: 18px 24px; }
     .hero { padding: 100px 24px 60px; }
-    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-    .hero-photos { display: none; }
     .hero-ctas { flex-direction: column; }
     .story { padding: 80px 24px; }
-    .photo-strip { grid-template-columns: 1fr 1fr; }
     .happened { padding: 80px 24px; }
     .happened-grid { grid-template-columns: 1fr 1fr; }
     .live-it { padding: 80px 24px; }
@@ -176,41 +165,17 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="tuccijonmichele.jpg" alt="Fattoria Cuscusa, Sardinia">
+    <img src="tuccijonmichele.jpg" alt="Stanley Tucci with Jon Brownstein and Michele Cuscusa in Sardinia">
   </div>
-  <div class="hero-inner">
-    <div class="hero-content">
-      <span class="hero-eyebrow">Tucci in Italy · Sardinia</span>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,56px);font-weight:300;color:var(--cream);line-height:1.1;margin-bottom:12px;opacity:0;animation:fadeUp .8s ease .25s forwards;">Tucci <em style="font-style:italic;color:var(--gold-light);">in Italy</em></div>
-      <div class="hero-announce">Premiering <em>May 11</em> —<br>with us in Sardegna</div>
-      <h1 class="hero-title">Stanley Tucci<br>spent a day<br><em>with us.</em></h1>
-      <p class="hero-sub">He came to discover the secrets of this 6,000 year old island. We cooked together all day, shared ancient recipes, drank organic wine and ate suckling pig cooked underground. Now it's your turn.</p>
-      <div class="hero-ctas">
-        <a href="#live-it" class="btn-gold">Come and live it →</a>
-        <a href="#the-box" class="btn-outline">Taste what he tasted →</a>
-      </div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Tucci in Italy · Sardinia</span>
+    <div class="hero-announce">Premiering <em>May 11</em> on Nat Geo · then on Disney+</div>
+    <h1 class="hero-title">Stanley Tucci<br>spent a day<br><em>with us.</em></h1>
+    <p class="hero-sub">He came to discover the secrets of this 6,000 year old island. We cooked together all day, shared ancient recipes, drank organic wine and ate suckling pig cooked underground. Now it's your turn.</p>
+    <div class="hero-ctas">
+      <a href="#live-it" class="btn-gold">Come and live it →</a>
+      <a href="#the-box" class="btn-outline">Taste what he tasted →</a>
     </div>
-    <div class="hero-photos">
-      <div class="hero-photo-grid">
-        <div class="hero-photo-item"><img src="tuccijonmichele.jpg" alt="Jon, Stanley and Michele"></div>
-        <div class="hero-photo-item"><img src="tucci-photo-1.jpg" alt="Jon, Stanley and Michele at Fattoria Cuscusa"></div>
-        <div class="hero-photo-item"><img src="tucci-photo-2.jpg" alt="At the table with Stanley Tucci"></div>
-        <div class="hero-photo-item"><img src="tucci-photo-3.jpg" alt="Stanley Tucci and Michele at lunch"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PHOTO STRIP -->
-<section class="photo-strip">
-  <div class="photo-strip-item">
-    <img src="tucci-photo-1.jpg" alt="Jon Brownstein, Stanley Tucci and Michele Cuscusa at Fattoria Cuscusa">
-  </div>
-  <div class="photo-strip-item">
-    <img src="tucci-photo-2.jpg" alt="Stanley Tucci with Jon and Michele at the table">
-  </div>
-  <div class="photo-strip-item">
-    <img src="tucci-photo-3.jpg" alt="Stanley Tucci and Michele Cuscusa at lunch">
   </div>
 </section>
 
@@ -260,7 +225,7 @@
     <div>
       <span class="live-it-label">The Shepherd's Day · Fattoria Cuscusa</span>
       <h2 class="live-it-title">Come and<br><em>live the day<br>yourself.</em></h2>
-      <p class="live-it-body">We bring small groups to Fattoria Cuscusa for a full day with Michele. Walk his land, understand his animals, press cheese, cook together and sit at the same table. This is not a tour. It is an introduction to a life.</p>
+      <p class="live-it-body">We bring small groups to Fattoria Cuscusa for a full day with Michele. Walk his land, understand his animals, make cheese with Michele, cook together and sit at the same table. This is not a tour. It is an introduction to a life.</p>
       <div class="live-it-includes">
         <span class="live-it-includes-title">The day includes</span>
         <ul>
@@ -275,7 +240,7 @@
       <a href="/#contact" class="btn-outline-dark">Start a conversation →</a>
     </div>
     <div class="live-it-visual">
-      <img src="centenarian/webflow_jon_michele_farm.jpg" alt="Jon Brownstein and Michele Cuscusa at Fattoria Cuscusa">
+      <img src="tuccijonmichele.jpg" alt="Jon Brownstein and Michele Cuscusa at Fattoria Cuscusa">
     </div>
   </div>
 </section>
@@ -333,42 +298,42 @@
       <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
         <span class="wine-card-producer">Fattoria Cuscusa</span>
         <div class="wine-card-name">Organic Cannonau<br>di Sardegna — Red</div>
-        <p class="wine-card-desc">Deep, structured Cannonau from Michele's own vines. High polyphenols, volcanic terroir.</p>
+        <p class="wine-card-desc">Michele Cuscusa hand picked organic Cannonau di Sardegna. Volcanic wines.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
 
       <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
         <span class="wine-card-producer">Fattoria Cuscusa</span>
         <div class="wine-card-name">Organic Cannonau<br>di Sardegna — Rosé</div>
-        <p class="wine-card-desc">The same Cannonau grape, lighter and luminous. A wine for long Sardinian lunches in the sun.</p>
+        <p class="wine-card-desc">Michele Cuscusa hand picked organic Cannonau di Sardegna Rosé. Volcanic wines.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
 
       <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
         <span class="wine-card-producer">Fattoria Cuscusa</span>
         <div class="wine-card-name">Organic Vermentino<br>di Sardegna</div>
-        <p class="wine-card-desc">Crisp, mineral and aromatic. Sardinia's great white grape from Michele's organic estate.</p>
+        <p class="wine-card-desc">Michele Cuscusa hand picked organic Vermentino di Sardegna. Volcanic wines.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
 
       <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
         <span class="wine-card-producer">Pusole</span>
         <div class="wine-card-name">No Sulfite<br>Cannonau</div>
-        <p class="wine-card-desc">Pure Cannonau, nothing added. Made the way shepherds have always made it — honest and direct.</p>
+        <p class="wine-card-desc">Pusole No Sulfite Cannonau.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
 
       <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
         <span class="wine-card-producer">Pusole</span>
         <div class="wine-card-name">No Sulfite<br>White Cannonau</div>
-        <p class="wine-card-desc">A rare expression — Cannonau vinified as a white. Unexpected, distinctive, unlike anything else from the island.</p>
+        <p class="wine-card-desc">Pusole No Sulfite white Cannonau grape.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
 
       <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
         <span class="wine-card-producer">Pusole</span>
         <div class="wine-card-name">Cannonau &amp; Bovale<br>High Polyphenol Blend</div>
-        <p class="wine-card-desc">The longevity wine. Cannonau and Bovale blended for maximum polyphenol depth — the wine of the centenarians.</p>
+        <p class="wine-card-desc">Pusole No Sulfite Cannonau and Bovale high polyphenol blend.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
 
