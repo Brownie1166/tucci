@@ -52,6 +52,9 @@
   .hero-title em { font-style: italic; color: var(--gold-light); }
   .hero-sub { font-size: 18px; font-weight: 300; line-height: 1.8; color: rgba(250,247,242,0.6); max-width: 600px; margin-bottom: 40px; opacity: 0; animation: fadeUp .8s ease .6s forwards; }
   .hero-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 56px); font-weight: 300; color: var(--cream); line-height: 1.4; max-width: 860px; margin-bottom: 48px; opacity: 0; animation: fadeUp .9s ease .3s forwards; }
+  .hero-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 72px); font-weight: 300; color: var(--cream); line-height: 1.15; max-width: 780px; margin-bottom: 20px; opacity: 0; animation: fadeUp .9s ease .3s forwards; }
+  .hero-statement em { font-style: italic; color: var(--gold-light); }
+  .hero-tagline { font-size: 14px; font-weight: 300; letter-spacing: .08em; color: rgba(250,247,242,0.55); margin-bottom: 44px; opacity: 0; animation: fadeUp .8s ease .5s forwards; }
   .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp .8s ease .8s forwards; }
   .hero-photo-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform .6s; }
 
@@ -143,6 +146,9 @@
     .nav { padding: 18px 24px; }
     .hero { padding: 100px 24px 60px; }
     .hero-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 56px); font-weight: 300; color: var(--cream); line-height: 1.4; max-width: 860px; margin-bottom: 48px; opacity: 0; animation: fadeUp .9s ease .3s forwards; }
+  .hero-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 72px); font-weight: 300; color: var(--cream); line-height: 1.15; max-width: 780px; margin-bottom: 20px; opacity: 0; animation: fadeUp .9s ease .3s forwards; }
+  .hero-statement em { font-style: italic; color: var(--gold-light); }
+  .hero-tagline { font-size: 14px; font-weight: 300; letter-spacing: .08em; color: rgba(250,247,242,0.55); margin-bottom: 44px; opacity: 0; animation: fadeUp .8s ease .5s forwards; }
   .hero-ctas { flex-direction: column; }
     .story { padding: 80px 24px; }
     .happened { padding: 80px 24px; }
@@ -170,7 +176,8 @@
     <img src="tuccijonmichele.jpg" alt="Stanley Tucci with Jon Brownstein and Michele Cuscusa in Sardinia">
   </div>
   <div class="hero-content">
-    <p class="hero-statement">Stanley Tucci spent a day with us in Sardegna. You can too. Watch Season 2 of Tucci in Italy — Nat Geo/Disney+, May 11 — and pack your bags.</p>
+    <h1 class="hero-statement">We cooked with Stanley Tucci in Sardegna.<br><em>Now it's your turn.</em></h1>
+    <p class="hero-tagline">Tucci in Italy, Season 2 — premiering on Nat Geo and Disney+ on May 11.</p>
     <div class="hero-ctas">
       <a href="#live-it" class="btn-gold">Come and live it →</a>
       <a href="#the-box" class="btn-outline">Taste what he tasted →</a>
@@ -337,27 +344,4 @@
     <a href="/#experiences">Experiences</a>
     <a href="mailto:jon@triguitalia.com">Contact</a>
   </div>
-  <span class="footer-copy">© 2026 Trigu Italia · Sardinia · Est. 2014</span>
-</footer>
-
-<script>
-  function reserveBox() {
-    var name = document.getElementById('t-name').value.trim();
-    var email = document.getElementById('t-email').value.trim();
-    var address = document.getElementById('t-address').value.trim();
-    var qty = document.getElementById('t-qty').value.trim() || '1';
-    var knife = document.getElementById('t-knife').value.trim() || 'No';
-    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !re.test(email)) {
-      document.getElementById('t-email').style.borderColor = '#c0392b';
-      document.getElementById('t-email').focus();
-      return;
-    }
-    fetch('https://formspree.io/f/mkopevbo', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        message: 'BOX ORDER (Tucci page) | Qty: ' + qty + ' | Knife: ' + knife + ' | Ship to: ' + address,
-        _subject: 'Centenarian Box
+  <sp
