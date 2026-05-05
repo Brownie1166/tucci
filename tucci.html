@@ -67,6 +67,16 @@
   /* PHOTO STRIP */
   .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .6s; display: block; }
 
+  /* FOOD GALLERY */
+  .gallery { background: var(--black); padding: 0; }
+  .gallery-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: auto; gap: 3px; }
+  .gallery-item { overflow: hidden; }
+  .gallery-item.tall { grid-row: span 2; }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s; min-height: 320px; }
+  .gallery-item:hover img { transform: scale(1.04); }
+  .gallery-caption { background: var(--black); padding: 16px 24px; }
+  .gallery-caption-text { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+
   /* WHAT HAPPENED */
   .happened { background: var(--warm-dark); padding: 110px 80px; }
   .happened-inner { max-width: 1100px; margin: 0 auto; }
@@ -152,6 +162,8 @@
   .hero-ctas { flex-direction: column; }
     .story { padding: 80px 24px; }
     .happened { padding: 80px 24px; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-item.tall { grid-row: span 1; }
     .happened-grid { grid-template-columns: 1fr 1fr; }
     .live-it { padding: 80px 24px; }
     .live-it-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -225,6 +237,42 @@
   </div>
 </section>
 
+<!-- FOOD GALLERY -->
+<section class="gallery">
+  <div class="gallery-grid">
+    <div class="gallery-item tall">
+      <img src="food-lorighitas.jpeg" alt="Lorighitas con sugo — hand made earring pasta with meat sauce">
+    </div>
+    <div class="gallery-item">
+      <img src="food-cooking.jpeg" alt="Michele cooking at Fattoria Cuscusa">
+    </div>
+    <div class="gallery-item">
+      <img src="food-fregula.jpeg" alt="Fregula Sarda cooking on the stove">
+    </div>
+    <div class="gallery-item">
+      <img src="cheesemaking.jpg" alt="Cheese making at Fattoria Cuscusa">
+    </div>
+    <div class="gallery-item">
+      <img src="sardinian-knife.jpg" alt="Handmade Sardinian knife" style="object-position: center center;">
+    </div>
+    <div class="gallery-item">
+      <img src="farm-donkey.jpg" alt="A day on the farm at Fattoria Cuscusa">
+    </div>
+    <div class="gallery-item">
+      <img src="walk-giara.jpg" alt="Walking the Giara plateau in Sardinia">
+    </div>
+    <div class="gallery-item">
+      <img src="wildhorses-giara.jpg" alt="Wild horses of the Giara plateau, Sardinia">
+    </div>
+    <div class="gallery-item" style="grid-column: span 3;">
+      <img src="micheles-vineyard.jpg" alt="Michele's organic vineyard at Fattoria Cuscusa" style="object-position: center 60%;max-height:400px;width:100%;object-fit:cover;">
+    </div>
+    <div class="gallery-item" style="grid-column: span 3;">
+      <img src="micheles-sheep.jpg" alt="Michele's sheep at Fattoria Cuscusa" style="object-position: center 40%;max-height:400px;width:100%;object-fit:cover;">
+    </div>
+  </div>
+</section>
+
 <!-- COME AND LIVE IT -->
 <section class="live-it" id="live-it">
   <div class="live-it-inner">
@@ -269,7 +317,7 @@
         <li>Sardinian wildflower honey</li>
         <li>Marmellata di corbezzolo — Sardinian strawberry tree marmalade</li>
         <li>250ml organic Sardinian extra virgin olive oil — ultra low acidity</li>
-        <li class="optional">+ Optional: handmade Sardinian knife</li>
+        <li class="optional">+ Optional: handmade Sardinian knife — each one unique, made by hand in Sardinia</li>
       </ul>
       <p style="font-size:12px;color:var(--text-muted);font-weight:300;">Also available in person at <strong style="color:rgba(250,247,242,0.5);">Bottega Gabriele</strong> · Seattle, WA</p>
     </div>
@@ -298,50 +346,4 @@
   <div class="the-wines-inner">
     <span class="the-wines-label">From the farm · Organic · No shortcuts</span>
     <h2 class="the-wines-title">The wines<br><em>on the table that day.</em></h2>
-    <p class="the-wines-body">Michele Cuscusa hand picks his organic Cannonau and Vermentino from his own vines in Gonnostramatza. Volcanic wines, shaped by the land and the sea wind. Longevity scientists believe Sardinian Cannonau plays a meaningful role in the island's extraordinary concentration of centenarians. These are handmade wines by a shepherd following his ancestors' methods.</p>
-    <div class="wines-grid">
-
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
-        <span class="wine-card-producer">Fattoria Cuscusa</span>
-        <div class="wine-card-name">Organic Cannonau<br>di Sardegna</div>
-        <p class="wine-card-desc">Michele Cuscusa hand picked organic Cannonau di Sardegna. Volcanic wines.</p>
-        <span class="wine-card-cta">Order on Wilo →</span>
-      </a>
-
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
-        <span class="wine-card-producer">Fattoria Cuscusa</span>
-        <div class="wine-card-name">Organic Cannonau<br>Rosé</div>
-        <p class="wine-card-desc">Michele Cuscusa hand picked organic Cannonau di Sardegna Rosé. Volcanic wines.</p>
-        <span class="wine-card-cta">Order on Wilo →</span>
-      </a>
-
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
-        <span class="wine-card-producer">Fattoria Cuscusa</span>
-        <div class="wine-card-name">Organic Semidano<br>di Sardegna</div>
-        <p class="wine-card-desc">Michele Cuscusa hand picked organic Semidano di Sardegna. Volcanic wines.</p>
-        <span class="wine-card-cta">Order on Wilo →</span>
-      </a>
-
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
-        <span class="wine-card-producer">Fattoria Cuscusa</span>
-        <div class="wine-card-name">Organic Vermentino<br>di Sardegna</div>
-        <p class="wine-card-desc">Michele Cuscusa hand picked organic Vermentino di Sardegna. Volcanic wines.</p>
-        <span class="wine-card-cta">Order on Wilo →</span>
-      </a>
-
-    </div>
-    <div class="the-wines-cta">
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="btn-gold">Browse all wines on Wilo →</a>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <span class="footer-logo">The Centenarian</span>
-  <div class="footer-links">
-    <a href="/">Home</a>
-    <a href="centenarian/shepherd-day.html">Shepherd's Day</a>
-    <a href="/#experiences">Experiences</a>
-    <a href="mailto:jon@triguitalia.com">Contact</a>
-  </div>
-  <sp
+    <p class="the-wines-body">Michele Cuscusa hand picks his organic Cannonau and Vermentino from his own vines in Gonnostramatza. Volcanic wines, sh
