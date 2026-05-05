@@ -50,7 +50,8 @@
   .hero-announce em { font-style: italic; font-size: 1.1em; color: var(--cream); }
   .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 7vw, 96px); font-weight: 300; color: var(--cream); line-height: 1.02; margin-bottom: 24px; opacity: 0; animation: fadeUp .9s ease .4s forwards; }
   .hero-title em { font-style: italic; color: var(--gold-light); }
-  .hero-sub { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(250,247,242,0.6); max-width: 600px; margin-bottom: 40px; opacity: 0; animation: fadeUp .8s ease .6s forwards; }
+  .hero-sub { font-size: 18px; font-weight: 300; line-height: 1.8; color: rgba(250,247,242,0.6); max-width: 600px; margin-bottom: 40px; opacity: 0; animation: fadeUp .8s ease .6s forwards; }
+  .hero-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 56px); font-weight: 300; color: var(--cream); line-height: 1.4; max-width: 860px; margin-bottom: 48px; opacity: 0; animation: fadeUp .9s ease .3s forwards; }
   .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp .8s ease .8s forwards; }
   .hero-photo-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform .6s; }
 
@@ -141,7 +142,8 @@
   @media (max-width: 900px) {
     .nav { padding: 18px 24px; }
     .hero { padding: 100px 24px 60px; }
-    .hero-ctas { flex-direction: column; }
+    .hero-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 56px); font-weight: 300; color: var(--cream); line-height: 1.4; max-width: 860px; margin-bottom: 48px; opacity: 0; animation: fadeUp .9s ease .3s forwards; }
+  .hero-ctas { flex-direction: column; }
     .story { padding: 80px 24px; }
     .happened { padding: 80px 24px; }
     .happened-grid { grid-template-columns: 1fr 1fr; }
@@ -168,10 +170,7 @@
     <img src="tuccijonmichele.jpg" alt="Stanley Tucci with Jon Brownstein and Michele Cuscusa in Sardinia">
   </div>
   <div class="hero-content">
-    <span class="hero-eyebrow">Tucci in Italy · Sardinia</span>
-    <div class="hero-announce">Premiering <em>May 11</em> on Nat Geo · then on Disney+</div>
-    <h1 class="hero-title">Stanley Tucci<br>spent a day<br><em>with us.</em></h1>
-    <p class="hero-sub">He came to discover the secrets of this 6,000 year old island. We cooked together all day, shared ancient recipes, drank organic wine and ate suckling pig cooked underground. Now it's your turn.</p>
+    <p class="hero-statement">Stanley Tucci spent a day with us in Sardegna. You can too. Watch Season 2 of Tucci in Italy — Nat Geo/Disney+, May 11 — and pack your bags.</p>
     <div class="hero-ctas">
       <a href="#live-it" class="btn-gold">Come and live it →</a>
       <a href="#the-box" class="btn-outline">Taste what he tasted →</a>
@@ -188,27 +187,27 @@
       <div class="happened-card">
         <span class="happened-card-icon">🍷</span>
         <h3 class="happened-card-title">Michele's Wines</h3>
-        <p class="happened-card-body">Organic Cannonau, Rosé, Vermentino and Semidano — grown on his own land, poured straight from the cellar.</p>
+        <p class="happened-card-body">Organic Cannonau, Rosé, Vermentino and Semidano — hand picked, organic, less added sulfites. Volcanic wines.</p>
       </div>
       <div class="happened-card">
         <span class="happened-card-icon">🍝</span>
         <h3 class="happened-card-title">Lorighitas — Earring Pasta</h3>
-        <p class="happened-card-body">Hand made in Morgongiori with Sardinian semolina from the Secci family. One of the rarest pasta shapes in the world.</p>
+        <p class="happened-card-body">Hand made in Morgongiori with Sardinian semolina from the Secci family.</p>
       </div>
       <div class="happened-card">
         <span class="happened-card-icon">🫙</span>
-        <h3 class="happened-card-title">Fregola Sarda</h3>
+        <h3 class="happened-card-title">Fregula Sarda</h3>
         <p class="happened-card-body">Hand made from the Marmilla. Toasted semolina pearls — ancient, nutty, impossible to find outside Sardinia.</p>
       </div>
       <div class="happened-card">
         <span class="happened-card-icon">🧀</span>
         <h3 class="happened-card-title">Raw Milk Cheese</h3>
-        <p class="happened-card-body">Goat and sheep's cheese made from raw milk — unpasteurised, uncompromised, exactly as the shepherds have always made it.</p>
+        <p class="happened-card-body">Goat and sheep's cheese made from raw milk, exactly as the shepherds have always made it.</p>
       </div>
       <div class="happened-card">
         <span class="happened-card-icon">🔥</span>
         <h3 class="happened-card-title">Underground Suckling Pig</h3>
-        <p class="happened-card-body">Porcetto buried in the earth and slow-cooked for 12 hours with myrtle and aromatic herbs. The ancient Sardinian method. A dish you do not forget.</p>
+        <p class="happened-card-body">Suckling pig buried in the earth and slow-cooked for 12 hours with myrtle and aromatic herbs. The ancient Sardinian method. A dish you do not forget. It is extremely rare to find in Sardegna — a lost tradition.</p>
       </div>
       <div class="happened-card">
         <span class="happened-card-icon">🥛</span>
@@ -225,7 +224,7 @@
     <div>
       <span class="live-it-label">The Shepherd's Day · Fattoria Cuscusa</span>
       <h2 class="live-it-title">Come and<br><em>live the day<br>yourself.</em></h2>
-      <p class="live-it-body">We bring small groups to Fattoria Cuscusa for a full day with Michele. Walk his land, understand his animals, make cheese with Michele, cook together and sit at the same table. This is not a tour. It is an introduction to a life.</p>
+      <p class="live-it-body">We bring small groups to Fattoria Cuscusa for a full day with Michele. Walk his land, understand his animals, make cheese with Michele, cook together and sit at the same table. This is not a tour. It is an introduction to Sardinian agricultural, shepherding, cheese and wine-making.</p>
       <div class="live-it-includes">
         <span class="live-it-includes-title">The day includes</span>
         <ul>
@@ -256,7 +255,7 @@
       <span class="the-box-price-note">Free shipping to the US &amp; EU · Handpacked in Sardinia</span>
       <ul class="the-box-list">
         <li>Lorighittas — ancient braided pasta from Morgongiori</li>
-        <li>Fregola Sarda — sun-dried toasted semolina</li>
+        <li>Fregula Sarda — sun-dried toasted semolina</li>
         <li>Carciofi sott'olio — Sardinian DOP artichokes preserved in oil, rich in iron</li>
         <li>Pane Carasau — the shepherd's bread, paper-thin and ancient</li>
         <li>Pecorino Sardo — aged sheep's cheese</li>
@@ -361,14 +360,4 @@
         name: name,
         email: email,
         message: 'BOX ORDER (Tucci page) | Qty: ' + qty + ' | Knife: ' + knife + ' | Ship to: ' + address,
-        _subject: 'Centenarian Box Order — $' + (parseInt(qty) * 200)
-      })
-    }).then(function() {
-      document.getElementById('order-form-wrap').style.display = 'none';
-      document.getElementById('order-success').style.display = 'block';
-    });
-  }
-</script>
-
-</body>
-</html>
+        _subject: 'Centenarian Box
