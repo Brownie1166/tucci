@@ -347,4 +347,83 @@
   <div class="the-wines-inner">
     <span class="the-wines-label">From the farm · Organic · No shortcuts</span>
     <h2 class="the-wines-title">The wines<br><em>on the table that day.</em></h2>
-    <p class="the-wines-body">Michele Cuscusa hand picks his organic Cannonau and Vermenti
+    <p class="the-wines-body">Michele Cuscusa hand picks his organic Cannonau and Vermentino from his own vines in Gonnostramatza. Volcanic wines, shaped by the land and the sea wind. Longevity scientists believe Sardinian Cannonau plays a meaningful role in the island's extraordinary concentration of centenarians. These are handmade wines by a shepherd following his ancestors' methods.</p>
+    <div class="wines-grid">
+
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
+        <span class="wine-card-producer">Fattoria Cuscusa</span>
+        <div class="wine-card-name">Organic Cannonau<br>di Sardegna</div>
+        <p class="wine-card-desc">Michele Cuscusa hand picked organic Cannonau di Sardegna. Volcanic wines.</p>
+        <span class="wine-card-cta">Order on Wilo →</span>
+      </a>
+
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
+        <span class="wine-card-producer">Fattoria Cuscusa</span>
+        <div class="wine-card-name">Organic Cannonau<br>Rosé</div>
+        <p class="wine-card-desc">Michele Cuscusa hand picked organic Cannonau di Sardegna Rosé. Volcanic wines.</p>
+        <span class="wine-card-cta">Order on Wilo →</span>
+      </a>
+
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
+        <span class="wine-card-producer">Fattoria Cuscusa</span>
+        <div class="wine-card-name">Organic Semidano<br>di Sardegna</div>
+        <p class="wine-card-desc">Michele Cuscusa hand picked organic Semidano di Sardegna. Volcanic wines.</p>
+        <span class="wine-card-cta">Order on Wilo →</span>
+      </a>
+
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
+        <span class="wine-card-producer">Fattoria Cuscusa</span>
+        <div class="wine-card-name">Organic Vermentino<br>di Sardegna</div>
+        <p class="wine-card-desc">Michele Cuscusa hand picked organic Vermentino di Sardegna. Volcanic wines.</p>
+        <span class="wine-card-cta">Order on Wilo →</span>
+      </a>
+
+    </div>
+    <div class="the-wines-cta">
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="btn-gold">Browse all wines on Wilo →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span class="footer-logo">The Centenarian</span>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="centenarian/shepherd-day.html">Shepherd's Day</a>
+    <a href="/#experiences">Experiences</a>
+    <a href="mailto:jon@triguitalia.com">Contact</a>
+  </div>
+  <span class="footer-copy">© 2026 Trigu Italia · Sardinia · Est. 2014</span>
+</footer>
+
+<script>
+  function reserveBox() {
+    var name = document.getElementById('t-name').value.trim();
+    var email = document.getElementById('t-email').value.trim();
+    var address = document.getElementById('t-address').value.trim();
+    var qty = document.getElementById('t-qty').value.trim() || '1';
+    var knife = document.getElementById('t-knife').value.trim() || 'No';
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !re.test(email)) {
+      document.getElementById('t-email').style.borderColor = '#c0392b';
+      document.getElementById('t-email').focus();
+      return;
+    }
+    fetch('https://formspree.io/f/mkopevbo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        message: 'BOX ORDER (Tucci page) | Qty: ' + qty + ' | Knife: ' + knife + ' | Ship to: ' + address,
+        _subject: 'Centenarian Box Order — $' + (parseInt(qty) * 200)
+      })
+    }).then(function() {
+      document.getElementById('order-form-wrap').style.display = 'none';
+      document.getElementById('order-success').style.display = 'block';
+    });
+  }
+</script>
+
+</body>
+</html>
