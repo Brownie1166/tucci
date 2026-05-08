@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-STL1BDXJE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-STL1BDXJE6');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Day in Sardinia — As Seen on Tucci in Italy — The Centenarian</title>
@@ -23,12 +31,10 @@
     --text-muted: #8C7B6B;
     --text-body: #3D3028;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   html, body { width: 100%; overflow-x: hidden; }
   body { font-family: 'Jost', sans-serif; background: var(--warm-dark); color: var(--text-body); }
-
   .nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
@@ -38,7 +44,6 @@
   .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; letter-spacing: .35em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
   .nav-back { font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(250,247,242,0.45); text-decoration: none; transition: color .2s; }
   .nav-back:hover { color: var(--gold); }
-
   /* HERO */
   .hero { min-height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 100px; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; z-index: 0; background: var(--warm-dark); }
@@ -57,7 +62,6 @@
   .hero-tagline { font-size: 18px; font-weight: 300; color: rgba(250,247,242,0.7); margin-bottom: 44px; opacity: 0; animation: fadeUp .8s ease .5s forwards; }
   .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp .8s ease .8s forwards; }
   .hero-photo-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform .6s; }
-
   .btn-gold { background: var(--gold); color: var(--black); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; padding: 18px 42px; text-decoration: none; transition: background .2s, transform .15s; display: inline-block; cursor: pointer; border: none; }
   .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
   .btn-outline { border: 1px solid rgba(250,247,242,0.3); color: rgba(250,247,242,0.65); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; padding: 18px 42px; text-decoration: none; transition: border-color .2s, color .2s; display: inline-block; }
@@ -66,7 +70,6 @@
   .btn-outline-dark:hover { border-color: var(--gold); background: rgba(184,134,11,0.08); }
   /* PHOTO STRIP */
   .photo-strip-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .6s; display: block; }
-
   /* FOOD GALLERY */
   .gallery { background: var(--black); padding: 0; }
   .gallery-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: auto; gap: 3px; }
@@ -76,7 +79,6 @@
   .gallery-item:hover img { transform: scale(1.04); }
   .gallery-caption { background: var(--black); padding: 16px 24px; }
   .gallery-caption-text { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
-
   /* WHAT HAPPENED */
   .happened { background: var(--warm-dark); padding: 110px 80px; }
   .happened-inner { max-width: 1100px; margin: 0 auto; }
@@ -88,7 +90,6 @@
   .happened-card-icon { font-size: 28px; margin-bottom: 20px; display: block; }
   .happened-card-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--cream); margin-bottom: 10px; line-height: 1.2; }
   .happened-card-body { font-size: 13px; font-weight: 300; color: rgba(250,247,242,0.45); line-height: 1.8; }
-
   /* COME LIVE IT */
   .live-it { background: var(--gold-pale); padding: 110px 80px; }
   .live-it-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
@@ -103,7 +104,6 @@
   .live-it-includes li::before { content: ''; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
   .live-it-visual { background: var(--warm-mid); aspect-ratio: 4/5; overflow: hidden; }
   .live-it-visual img { width: 100%; height: 100%; object-fit: cover; }
-
   /* THE BOX */
   .the-box { background: var(--warm-dark); padding: 110px 80px; }
   .the-box-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; }
@@ -118,7 +118,6 @@
   .the-box-list li::before { content: ''; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
   .the-box-list li.optional { color: var(--gold); font-style: italic; }
   .the-box-list li.optional::before { background: var(--gold-light); }
-
   .order-form { background: var(--warm-mid); padding: 44px; }
   .order-form-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--cream); margin-bottom: 6px; }
   .order-form-sub { font-size: 12px; font-weight: 300; color: var(--text-muted); margin-bottom: 24px; line-height: 1.6; }
@@ -126,7 +125,6 @@
   .order-form input::placeholder { color: rgba(250,247,242,0.3); }
   .order-form input:focus { border-color: var(--gold); }
   .order-form-note { font-size: 11px; color: var(--text-muted); margin-top: 14px; text-align: center; line-height: 1.7; }
-
   /* THE WINES */
   .the-wines { background: var(--black); padding: 110px 80px; }
   .the-wines-inner { max-width: 1100px; margin: 0 auto; }
@@ -142,16 +140,13 @@
   .wine-card-desc { font-size: 12px; font-weight: 300; color: rgba(250,247,242,0.4); line-height: 1.7; margin-bottom: 20px; }
   .wine-card-cta { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid rgba(184,134,11,0.3); padding-bottom: 2px; display: inline-block; }
   .the-wines-cta { text-align: center; }
-
   .footer { background: var(--warm-dark); border-top: 1px solid rgba(184,134,11,0.12); padding: 44px 80px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
   .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 300; letter-spacing: .35em; color: var(--cream); text-transform: uppercase; }
   .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
   .footer-links a { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color .2s; }
   .footer-links a:hover { color: var(--gold); }
   .footer-copy { font-size: 11px; color: rgba(140,123,107,0.35); }
-
   @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-
   @media (max-width: 900px) {
     .nav { padding: 18px 24px; }
     .hero { padding: 100px 24px 60px; }
@@ -176,27 +171,24 @@
 </style>
 </head>
 <body>
-
 <nav class="nav">
   <a href="/" class="nav-logo">The Centenarian</a>
   <a href="/" class="nav-back">← Back to the site</a>
 </nav>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
     <img src="tuccijonmichele.jpg" alt="Stanley Tucci with Jon Brownstein and Michele Cuscusa in Sardinia">
   </div>
   <div class="hero-content">
-    <h1 class="hero-statement">We cooked with Stanley Tucci in Sardegna.<br><em>Now it's your turn.</em></h1>
+    <h1 class="hero-statement">Stanley Tucci came to our farm for Lunch.<br><em>Now it is your turn!</em></h1>
     <p class="hero-tagline">Tucci in Italy, Season 2 — premiering on Nat Geo and Disney+ on May 11.</p>
     <div class="hero-ctas">
-      <a href="#live-it" class="btn-gold">Come and live it →</a>
-      <a href="#the-box" class="btn-outline">Taste what he tasted →</a>
+      <a href="#live-it" class="btn-gold" onclick="gtag('event','cta_click',{cta:'come_live_it',location:'hero'});">Come and live it →</a>
+      <a href="#the-box" class="btn-outline" onclick="gtag('event','cta_click',{cta:'taste_box',location:'hero'});">Taste what he tasted →</a>
     </div>
   </div>
 </section>
-
 <!-- WHAT HAPPENED THAT DAY -->
 <section class="happened">
   <div class="happened-inner">
@@ -236,7 +228,6 @@
     </div>
   </div>
 </section>
-
 <!-- FOOD GALLERY -->
 <section class="gallery">
   <div class="gallery-grid">
@@ -272,7 +263,6 @@
     </div>
   </div>
 </section>
-
 <!-- COME AND LIVE IT -->
 <section class="live-it" id="live-it">
   <div class="live-it-inner">
@@ -292,14 +282,13 @@
           <li>12-hour underground suckling pig — must be reserved one month in advance. Not available in summer months.</li>
         </ul>
       </div>
-      <a href="/#contact" class="btn-outline-dark">Start a conversation →</a>
+      <a href="/#contact" class="btn-outline-dark" onclick="gtag('event','tour_inquiry_click',{location:'live_it_section'});">Start a conversation →</a>
     </div>
     <div class="live-it-visual">
       <img src="tuccijonmichele.jpg" alt="Jon Brownstein and Michele Cuscusa at Fattoria Cuscusa">
     </div>
   </div>
 </section>
-
 <!-- THE BOX -->
 <section class="the-box" id="the-box">
   <div class="the-box-inner">
@@ -341,7 +330,6 @@
     </div>
   </div>
 </section>
-
 <!-- THE WINES -->
 <section class="the-wines" id="wines">
   <div class="the-wines-inner">
@@ -349,42 +337,36 @@
     <h2 class="the-wines-title">The wines<br><em>on the table that day.</em></h2>
     <p class="the-wines-body">Michele Cuscusa hand picks his organic Cannonau and Vermentino from his own vines in Gonnostramatza. Volcanic wines, shaped by the land and the sea wind. Longevity scientists believe Sardinian Cannonau plays a meaningful role in the island's extraordinary concentration of centenarians. These are handmade wines by a shepherd following his ancestors' methods.</p>
     <div class="wines-grid">
-
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card" onclick="gtag('event','wine_click',{wine:'cannonau'});">
         <span class="wine-card-producer">Fattoria Cuscusa</span>
         <div class="wine-card-name">Organic Cannonau<br>di Sardegna</div>
         <p class="wine-card-desc">Michele Cuscusa hand picked organic Cannonau di Sardegna. Volcanic wines.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
-
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card" onclick="gtag('event','wine_click',{wine:'rose'});">
         <span class="wine-card-producer">Fattoria Cuscusa</span>
         <div class="wine-card-name">Organic Cannonau<br>Rosé</div>
         <p class="wine-card-desc">Michele Cuscusa hand picked organic Cannonau di Sardegna Rosé. Volcanic wines.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
-
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card" onclick="gtag('event','wine_click',{wine:'semidano'});">
         <span class="wine-card-producer">Fattoria Cuscusa</span>
         <div class="wine-card-name">Organic Semidano<br>di Sardegna</div>
         <p class="wine-card-desc">Michele Cuscusa hand picked organic Semidano di Sardegna. Volcanic wines.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
-
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card">
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="wine-card" onclick="gtag('event','wine_click',{wine:'vermentino'});">
         <span class="wine-card-producer">Fattoria Cuscusa</span>
         <div class="wine-card-name">Organic Vermentino<br>di Sardegna</div>
         <p class="wine-card-desc">Michele Cuscusa hand picked organic Vermentino di Sardegna. Volcanic wines.</p>
         <span class="wine-card-cta">Order on Wilo →</span>
       </a>
-
     </div>
     <div class="the-wines-cta">
-      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="btn-gold">Browse all wines on Wilo →</a>
+      <a href="https://wiloclub.it/wilostore/3472/" target="_blank" class="btn-gold" onclick="gtag('event','wine_click',{wine:'browse_all'});">Browse all wines on Wilo →</a>
     </div>
   </div>
 </section>
-
 <footer class="footer">
   <span class="footer-logo">The Centenarian</span>
   <div class="footer-links">
@@ -395,7 +377,6 @@
   </div>
   <span class="footer-copy">© 2026 Trigu Italia · Sardinia · Est. 2014</span>
 </footer>
-
 <script>
   function reserveBox() {
     var name = document.getElementById('t-name').value.trim();
@@ -408,6 +389,15 @@
       document.getElementById('t-email').style.borderColor = '#c0392b';
       document.getElementById('t-email').focus();
       return;
+    }
+    // GA4 conversion event — tracks box reservations + revenue value
+    if (typeof gtag === 'function') {
+      gtag('event', 'box_reservation', {
+        currency: 'USD',
+        value: parseInt(qty) * 200,
+        quantity: parseInt(qty),
+        knife: knife
+      });
     }
     fetch('https://formspree.io/f/mkopevbo', {
       method: 'POST',
@@ -424,6 +414,5 @@
     });
   }
 </script>
-
 </body>
 </html>
