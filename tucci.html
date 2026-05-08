@@ -9,6 +9,23 @@
   gtag('js', new Date());
   gtag('config', 'G-STL1BDXJE6');
 </script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1872941946752718');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1872941946752718&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Day in Sardinia — As Seen on Tucci in Italy — The Centenarian</title>
@@ -395,24 +412,4 @@
       gtag('event', 'box_reservation', {
         currency: 'USD',
         value: parseInt(qty) * 200,
-        quantity: parseInt(qty),
-        knife: knife
-      });
-    }
-    fetch('https://formspree.io/f/mkopevbo', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        message: 'BOX ORDER (Tucci page) | Qty: ' + qty + ' | Knife: ' + knife + ' | Ship to: ' + address,
-        _subject: 'Centenarian Box Order — $' + (parseInt(qty) * 200)
-      })
-    }).then(function() {
-      document.getElementById('order-form-wrap').style.display = 'none';
-      document.getElementById('order-success').style.display = 'block';
-    });
-  }
-</script>
-</body>
-</html>
+        quantity: parseI
