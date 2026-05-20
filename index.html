@@ -87,6 +87,7 @@
   .exp-card { background: var(--warm-dark); padding: 48px 36px; position: relative; transition: background .25s; }
   .exp-card:hover { background: #231e1a; }
   .exp-card.featured { background: var(--warm-mid); grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .exp-card.featured-wide { grid-column: span 3; }
   .exp-num { font-family: 'Cormorant Garamond', serif; font-size: 80px; font-weight: 300; color: rgba(184,134,11,0.8); line-height: 1; margin-bottom: 20px; display: block; }
   .exp-tag { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
   .exp-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--cream); margin-bottom: 16px; line-height: 1.2; }
@@ -215,10 +216,11 @@
     /* EXPERIENCES */
     .experiences { padding: 64px 20px; }
     .experiences-header { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
-    .exp-grid { grid-template-columns: 1fr; gap: 2px; }
-    .exp-card { padding: 32px 24px; }
-    .exp-card.featured { grid-column: span 1; grid-template-columns: 1fr; gap: 0; }
-    .exp-card.featured .exp-card-image { aspect-ratio: 16/9; min-height: unset; }
+    .exp-grid { grid-template-columns: 1fr !important; gap: 2px; }
+    .exp-card { padding: 32px 24px; grid-column: span 1 !important; grid-template-columns: 1fr !important; }
+    .exp-card.featured { grid-column: span 1 !important; grid-template-columns: 1fr !important; gap: 0; }
+    .exp-card.featured .exp-card-image { aspect-ratio: 16/9; min-height: unset !important; }
+    .exp-card[style] { grid-column: span 1 !important; grid-template-columns: 1fr !important; }
     .exp-num { font-size: 56px; margin-bottom: 12px; }
 
     /* VIDEOS */
@@ -347,7 +349,7 @@
         <a href="centenarian/shepherd-day.html" class="btn-primary-lg">Discover the Shepherd's Experience →</a>
       </div>
     </div>
-    <div class="exp-card featured" style="grid-column: span 3; grid-template-columns: 1fr 1fr;">
+    <div class="exp-card featured featured-wide">
       <div class="exp-card-text" style="padding: 48px 36px;">
         <span class="exp-num">02</span>
         <span class="exp-tag">For golfers · 4–10 days · Sardegna</span>
