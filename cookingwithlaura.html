@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cooking with Laura — A Private Day with Chef Laura Secchi — The Centenarian</title>
+<meta name="description" content="From Cagliari's civic market at dawn to a private 4-course dinner cooked in front of you. A day with Chef Laura Secchi at Vita Nuova — the most intimate way to understand Sardinian cooking.">
+<meta property="og:title" content="Cooking with Laura — Chef Laura Secchi · Vita Nuova · Cagliari">
+<meta property="og:description" content="From the market at dawn to a private dinner cooked in front of you. Watching Laura cook is like watching a superstar athlete perform.">
+<meta property="og:image" content="https://thecentenerian.com/laura-hero.jpg">
+<meta property="og:url" content="https://thecentenerian.com/cookingwithlaura.html">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8860B;
+    --gold-light: #D4A017;
+    --gold-pale: #F5EDD6;
+    --black: #0D0D0D;
+    --warm-dark: #1A1612;
+    --warm-mid: #2C2420;
+    --cream: #FAF7F2;
+    --text-muted: #8C7B6B;
+    --text-body: #3D3028;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { width: 100%; overflow-x: hidden; }
+  body { font-family: 'Jost', sans-serif; background: var(--warm-dark); color: var(--text-body); }
+
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 24px 56px; background: linear-gradient(to bottom, rgba(13,13,13,0.9), transparent); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; letter-spacing: .35em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+  .nav-back { font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(250,247,242,0.45); text-decoration: none; transition: color .2s; }
+  .nav-back:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero { min-height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 80px 100px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; background: var(--warm-dark); }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; opacity: 0.45; }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,13,13,0.97) 0%, rgba(13,13,13,0.4) 50%, rgba(13,13,13,0.1) 100%); }
+  .hero-content { position: relative; z-index: 2; max-width: 820px; }
+  .hero-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; display: block; opacity: 0; animation: fadeUp .7s ease .2s forwards; }
+  .hero-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5.5vw, 80px); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 24px; opacity: 0; animation: fadeUp .9s ease .3s forwards; }
+  .hero-statement em { font-style: italic; color: var(--gold-light); }
+  .hero-tagline { font-size: 17px; font-weight: 300; color: rgba(250,247,242,0.65); margin-bottom: 44px; max-width: 580px; line-height: 1.7; opacity: 0; animation: fadeUp .8s ease .5s forwards; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp .8s ease .8s forwards; }
+  .btn-gold { background: var(--gold); color: var(--black); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; padding: 18px 42px; text-decoration: none; transition: background .2s, transform .15s; display: inline-block; cursor: pointer; border: none; }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline { border: 1px solid rgba(250,247,242,0.3); color: rgba(250,247,242,0.65); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; padding: 18px 42px; text-decoration: none; transition: border-color .2s, color .2s; display: inline-block; }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* MARKET */
+  .market { background: var(--black); padding: 110px 80px; }
+  .market-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: rgba(184,134,11,0.7); margin-bottom: 24px; display: block; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 20px; }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+  .section-body { font-size: 15px; font-weight: 300; line-height: 1.9; color: rgba(250,247,242,0.55); max-width: 720px; margin-bottom: 56px; }
+  .market-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3px; }
+  .market-img { overflow: hidden; }
+  .market-img img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 400px; transition: transform .6s; }
+  .market-img:hover img { transform: scale(1.03); }
+  .market-img.tall { grid-row: span 2; }
+
+  /* THE DAY */
+  .the-day { background: var(--warm-dark); padding: 110px 80px; }
+  .the-day-inner { max-width: 1100px; margin: 0 auto; }
+  .timeline { display: flex; flex-direction: column; gap: 2px; margin-top: 56px; }
+  .timeline-item { background: var(--warm-mid); padding: 40px 48px; display: grid; grid-template-columns: 140px 1fr; gap: 48px; align-items: start; }
+  .timeline-time { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; color: var(--gold-light); line-height: 1; padding-top: 4px; }
+  .timeline-time span { display: block; font-size: 10px; font-family: 'Jost', sans-serif; letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted); margin-top: 6px; font-weight: 300; }
+  .timeline-content-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--cream); margin-bottom: 12px; }
+  .timeline-content-body { font-size: 14px; font-weight: 300; color: rgba(250,247,242,0.55); line-height: 1.85; }
+
+  /* LAURA */
+  .laura { background: var(--gold-pale); padding: 110px 80px; }
+  .laura-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+  .laura-label { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: block; }
+  .laura-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 54px); font-weight: 300; color: var(--warm-dark); line-height: 1.1; margin-bottom: 28px; }
+  .laura-title em { font-style: italic; color: var(--gold); }
+  .laura-body { font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--text-body); margin-bottom: 20px; }
+  .laura-pull { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.2vw, 26px); font-weight: 300; font-style: italic; color: var(--warm-dark); border-left: 2px solid var(--gold); padding-left: 28px; margin: 36px 0; line-height: 1.5; }
+  .laura-detail { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin-top: 8px; }
+  .laura-image { aspect-ratio: 4/5; overflow: hidden; }
+  .laura-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+  /* VIDEO */
+  .video-section { background: var(--black); padding: 0; }
+  .video-section-header { padding: 80px 80px 48px; max-width: 1100px; margin: 0 auto; }
+  .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+  .video-wrap { position: relative; overflow: hidden; background: var(--warm-mid); }
+  .video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 380px; }
+  .video-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 24px; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); }
+  .video-caption span { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(250,247,242,0.6); }
+
+  /* DINNER */
+  .dinner { background: var(--warm-dark); padding: 110px 80px; }
+  .dinner-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .dinner-image { overflow: hidden; aspect-ratio: 4/3; }
+  .dinner-image img { width: 100%; height: 100%; object-fit: cover; }
+  .dinner-label { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: rgba(184,134,11,0.7); margin-bottom: 20px; display: block; }
+  .dinner-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 46px); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 24px; }
+  .dinner-title em { font-style: italic; color: var(--gold-light); }
+  .dinner-body { font-size: 15px; font-weight: 300; line-height: 1.9; color: rgba(250,247,242,0.55); margin-bottom: 20px; }
+
+  /* INCLUDES */
+  .includes { background: var(--black); padding: 110px 80px; }
+  .includes-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; }
+  .includes-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 50px); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 36px; }
+  .includes-title em { font-style: italic; color: var(--gold-light); }
+  .includes-list { list-style: none; margin-bottom: 36px; }
+  .includes-list li { font-size: 14px; font-weight: 300; color: rgba(250,247,242,0.65); padding: 12px 0; border-bottom: 1px solid rgba(184,134,11,0.15); display: flex; gap: 14px; align-items: flex-start; line-height: 1.6; }
+  .includes-list li::before { content: ''; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+  .includes-details { background: var(--warm-mid); padding: 44px; }
+  .includes-details-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--cream); margin-bottom: 24px; }
+  .detail-row { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 1px solid rgba(184,134,11,0.12); gap: 16px; }
+  .detail-label { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; }
+  .detail-value { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 300; color: var(--cream); text-align: right; }
+  .includes-note { font-size: 12px; font-weight: 300; color: var(--text-muted); line-height: 1.7; margin-top: 20px; }
+
+  /* CTA */
+  .cta { padding: 130px 80px; text-align: center; background: var(--warm-dark); }
+  .cta-inner { max-width: 680px; margin: 0 auto; }
+  .cta-label { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: block; }
+  .cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 300; color: var(--cream); line-height: 1.1; margin-bottom: 20px; }
+  .cta-title em { font-style: italic; color: var(--gold-light); }
+  .cta-body { font-size: 15px; font-weight: 300; line-height: 1.85; color: rgba(250,247,242,0.55); margin-bottom: 44px; }
+
+  /* FOOTER */
+  .footer { background: var(--black); padding: 44px 80px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(184,134,11,0.12); }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 300; letter-spacing: .35em; color: var(--cream); text-transform: uppercase; }
+  .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+  .footer-links a { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy { font-size: 11px; color: rgba(140,123,107,0.35); }
+
+  /* Ollidays badge */
+  .ollidays-footer { background: var(--black); border-top: 1px solid rgba(184,134,11,0.08); padding: 28px 80px 36px; display: flex; align-items: center; justify-content: center; }
+  .ollidays-badge { display: inline-flex; align-items: center; gap: 14px; padding: 11px 20px; background: #111; border: 1px solid #2a2420; border-radius: 10px; text-decoration: none; transition: border-color .15s; }
+  .ollidays-badge:hover { border-color: #7ec8e3; }
+  .ollidays-divider { width: 1px; height: 36px; background: #2a2420; flex-shrink: 0; }
+  .ollidays-text { display: flex; flex-direction: column; gap: 3px; }
+  .ollidays-powered { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: #5a5a5a; line-height: 1; }
+  .ollidays-tagline { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; color: #D4A017; line-height: 1.2; }
+  .ollidays-sub { font-family: 'Jost', sans-serif; font-size: 11px; color: #5a5a5a; line-height: 1; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 900px) {
+    .nav { padding: 18px 24px; }
+    .hero { padding: 100px 24px 72px; }
+    .hero-ctas { flex-direction: column; }
+    .market { padding: 80px 24px; }
+    .market-grid { grid-template-columns: 1fr; }
+    .market-img.tall { grid-row: span 1; }
+    .the-day { padding: 80px 24px; }
+    .timeline-item { grid-template-columns: 1fr; gap: 12px; padding: 32px 24px; }
+    .laura { padding: 80px 24px; }
+    .laura-inner { grid-template-columns: 1fr; gap: 48px; }
+    .video-section-header { padding: 60px 24px 36px; }
+    .video-grid { grid-template-columns: 1fr; }
+    .dinner { padding: 80px 24px; }
+    .dinner-inner { grid-template-columns: 1fr; gap: 48px; }
+    .includes { padding: 80px 24px; }
+    .includes-inner { grid-template-columns: 1fr; gap: 48px; }
+    .cta { padding: 90px 24px; }
+    .footer { padding: 36px 24px; flex-direction: column; align-items: flex-start; }
+    .ollidays-footer { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">The Centenarian</a>
+  <a href="/" class="nav-back">← Back to the site</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="PXL_20240430_070248930__2_.jpg" alt="Guests at Cagliari's Civic Market with Chef Laura Secchi">
+  </div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">A private experience · Cagliari · Vita Nuova</span>
+    <h1 class="hero-statement">A day in the kitchen<br>with <em>Chef Laura Secchi.</em></h1>
+    <p class="hero-tagline">From Cagliari's ancient civic market at dawn to a private 4–5 course dinner cooked in front of you. The most intimate way to understand what Sardinian cooking really is.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-gold">Enquire about this experience →</a>
+      <a href="#the-day" class="btn-outline">See the full day →</a>
+    </div>
+  </div>
+</section>
+
+<!-- THE MARKET -->
+<section class="market">
+  <div class="market-inner">
+    <span class="section-label">8:30 am · Cagliari Civic Market</span>
+    <h2 class="section-title">It starts<br><em>at the market.</em></h2>
+    <p class="section-body">We meet at Il Piemontese — one of Cagliari's most famous bars and pasticcerie — for coffee and pastries. Then Laura takes us to the Civic Market. She knows every vendor. She touches the fish, smells the herbs, holds the tomatoes. You begin to understand her cooking before she has touched a pan.</p>
+  </div>
+  <div class="market-grid">
+    <div class="market-img tall">
+      <img src="PXL_20240430_065716545.jpg" alt="Laura Secchi leading guests through Cagliari's Civic Market">
+    </div>
+    <div class="market-img">
+      <img src="PXL_20240430_065408128_MP.jpg" alt="Choosing fish at the Civic Market, Cagliari">
+    </div>
+    <div class="market-img">
+      <img src="PXL_20240430_070248930__2_.jpg" alt="Guests with the fishmonger at Cagliari market">
+    </div>
+  </div>
+</section>
+
+<!-- THE DAY TIMELINE -->
+<section class="the-day" id="the-day">
+  <div class="the-day-inner">
+    <span class="section-label">The day, from start to finish</span>
+    <h2 class="section-title">Two moments.<br><em>One unforgettable day.</em></h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">8:30<span>Morning</span></div>
+        <div>
+          <h3 class="timeline-content-title">Coffee at Il Piemontese — then the market</h3>
+          <p class="timeline-content-body">We meet at Il Piemontese, one of Cagliari's most storied bars and pasticcerie. Coffee, pastry, introductions. From there, Laura takes us to the Civic Market. She selects everything for dinner herself — fresh fish off the morning boats, vegetables, cheese, bread. You begin to understand her cooking before she has touched a pan.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">6:00<span>Evening</span></div>
+        <div>
+          <h3 class="timeline-content-title">A private evening at Vita Nuova, Via Sassari</h3>
+          <p class="timeline-content-body">Laura closes her restaurant to the public. It belongs to you. She cooks a 4–5 course dinner in front of the group — explaining every step, every decision, every instinct. You are not watching a demonstration. You are watching a superstar at work. Then you sit down and eat everything she made, with wine to match. The recipes are yours to take home.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAURA -->
+<section class="laura">
+  <div class="laura-inner">
+    <div>
+      <span class="laura-label">Chef · Vita Nuova · Cagliari</span>
+      <h2 class="laura-title">Laura <em>Secchi.</em></h2>
+      <p class="laura-body">Laura started cooking at eight years old, at the side of her grandmother and aunt in Oristano — a family of Spanish descent whose cooking was rooted in the oldest traditions of the island. What she learned there never left her.</p>
+      <p class="laura-body">Her cooking, and especially her way with fresh fish, rivals any chef in Sardinia. Not through complexity, but through the opposite: an almost instinctive understanding of which flavours belong together, and the discipline to stop there. The result is food of extraordinary simplicity and depth.</p>
+      <blockquote class="laura-pull">Watching Laura cook is like watching a superstar athlete perform. It is a memory you will never forget — and the recipes you will be able to replicate at home.</blockquote>
+      <p class="laura-body">She is from Oristano. She has cooked at Vita Nuova in Via Sassari, Cagliari for years. Her cooking encompasses everything that is Sardinian — the freshest ingredients, cooked with elegance and simplicity, creating some of the most sublime tastes you will ever experience.</p>
+      <p class="laura-detail">Vita Nuova · Via Sassari, Cagliari · Sardinia</p>
+    </div>
+    <div class="laura-image">
+      <img src="WhatsApp_Image_2026-05-20_at_23_12_44.jpeg" alt="Chef Laura Secchi cooking at Vita Nuova">
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="video-section">
+  <div class="video-section-header">
+    <span class="section-label">Watch her cook</span>
+    <h2 class="section-title" style="color:var(--cream);">Laura at <em>work.</em></h2>
+  </div>
+  <div class="video-grid">
+    <div class="video-wrap">
+      <video controls playsinline preload="metadata">
+        <source src="WhatsApp_Video_2026-05-20_at_23_03_30.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption"><span>Laura making lorighittas · Vita Nuova</span></div>
+    </div>
+    <div class="video-wrap">
+      <video controls playsinline preload="metadata">
+        <source src="WhatsApp_Video_2026-05-20_at_23_14_40.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption"><span>An evening at Vita Nuova · Cagliari</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DINNER -->
+<section class="dinner">
+  <div class="dinner-inner">
+    <div class="dinner-image">
+      <img src="WhatsApp_Imagealicia.jpeg" alt="Guests at dinner at Vita Nuova, Cagliari">
+    </div>
+    <div>
+      <span class="dinner-label">6:00 pm · Vita Nuova</span>
+      <h2 class="dinner-title">Then you sit down<br>and <em>eat what she made.</em></h2>
+      <p class="dinner-body">The restaurant is yours. Laura has cooked everything in front of you. Now it arrives at the table — course by course, with wine chosen to match. The same dishes. The same ingredients you chose that morning at the market.</p>
+      <p class="dinner-body">This is not a restaurant dinner. It is something you will talk about for years.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDES -->
+<section class="includes" id="includes">
+  <div class="includes-inner">
+    <div>
+      <h2 class="includes-title">What the<br><em>day includes.</em></h2>
+      <ul class="includes-list">
+        <li>Morning coffee and pastry at Il Piemontese</li>
+        <li>Private market tour with Laura at Cagliari's Civic Market</li>
+        <li>All ingredients selected and purchased by Laura</li>
+        <li>Exclusive private use of Vita Nuova restaurant</li>
+        <li>Live cooking of a 4–5 course Sardinian dinner</li>
+        <li>Full dinner with wine — everything Laura has cooked</li>
+        <li>All recipes to take home</li>
+        <li>Maximum 10 guests</li>
+        <li>Jon Brownstein present throughout the day</li>
+      </ul>
+    </div>
+    <div>
+      <div class="includes-details">
+        <h3 class="includes-details-title">Experience details</h3>
+        <div class="detail-row">
+          <span class="detail-label">Morning</span>
+          <span class="detail-value">8:30 am · Il Piemontese</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Evening</span>
+          <span class="detail-value">6:00 pm · Vita Nuova, Via Sassari</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Group size</span>
+          <span class="detail-value">Maximum 10 guests</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Pricing</span>
+          <span class="detail-value">On request</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Location</span>
+          <span class="detail-value">Cagliari, Sardinia</span>
+        </div>
+        <p class="includes-note">Pricing varies by group size and menu. Contact us and we will put together a proposal for your dates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <span class="cta-label">Every experience starts with a conversation</span>
+    <h2 class="cta-title"><em>Come and cook<br>with Laura.</em></h2>
+    <p class="cta-body">Tell us when you are coming to Sardinia and how many people are in your group. We will check Laura's availability and come back to you with a proposal. Most dates are arranged weeks in advance.</p>
+    <a href="mailto:jon@triguitalia.com" class="btn-gold">Write to Jon →</a>
+    <p style="font-size:12px;color:rgba(250,247,242,0.3);margin-top:20px;letter-spacing:.05em;">jon@triguitalia.com</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span class="footer-logo">The Centenarian</span>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/#experiences">Experiences</a>
+    <a href="/#people">Who we are</a>
+    <a href="mailto:jon@triguitalia.com">Contact</a>
+  </div>
+  <span class="footer-copy">© 2026 Trigu Italia · Sardinia · Est. 2014</span>
+</footer>
+
+<div class="ollidays-footer">
+  <a class="ollidays-badge" href="https://www.ollidays.com/en/" target="_blank" rel="noopener">
+    <svg width="108" height="40" viewBox="0 0 108 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ollidays">
+      <circle cx="16" cy="24" r="14" fill="#2b3a8c"/>
+      <circle cx="16" cy="24" r="6.5" fill="#fff"/>
+      <circle cx="26" cy="11" r="5" fill="#7ec8e3"/>
+      <rect x="35" y="6" width="7" height="30" rx="1.5" fill="#2b3a8c"/>
+      <rect x="46" y="6" width="7" height="30" rx="1.5" fill="#2b3a8c"/>
+      <rect x="57" y="14" width="6" height="22" rx="1.5" fill="#2b3a8c"/>
+      <circle cx="60" cy="8" r="4.5" fill="#7ec8e3"/>
+      <text x="68" y="36" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="400" fill="#7ec8e3">days</text>
+    </svg>
+    <div class="ollidays-divider"></div>
+    <div class="ollidays-text">
+      <span class="ollidays-powered">Powered by</span>
+      <span class="ollidays-tagline">Affordable, luxury holidays</span>
+      <span class="ollidays-sub">Italian DMO &nbsp;·&nbsp; Cagliari, Italy</span>
+    </div>
+  </a>
+</div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    var nav = document.querySelector('.nav');
+    if (window.scrollY > 80) { nav.style.background = 'rgba(13,13,13,0.97)'; }
+    else { nav.style.background = 'linear-gradient(to bottom, rgba(13,13,13,0.9), transparent)'; }
+  });
+</script>
+</body>
+</html>
