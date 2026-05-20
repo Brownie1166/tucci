@@ -184,31 +184,86 @@
   @keyframes scrollPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 
   @media (max-width: 900px) {
-    .nav { padding: 20px 24px; }
+    /* NAV */
+    .nav { padding: 16px 20px; }
     .nav-links { display: none; }
-    .hero { padding: 0 24px 80px; }
-    .hero-scroll { right: 24px; }
+    .nav-logo { font-size: 13px; letter-spacing: .25em; }
+
+    /* HERO */
+    .hero { padding: 0 20px 64px; min-height: 100svh; }
+    .hero-scroll { display: none; }
+    .hero-title { font-size: clamp(40px, 11vw, 64px); }
+    .hero-sub { font-size: 16px; margin-bottom: 32px; }
+    .hero-cta-group { flex-direction: column; gap: 12px; }
+    .btn-primary { text-align: center; padding: 16px 28px; }
+    .btn-ghost { text-align: center; padding: 16px 28px; }
     .tucci-hero-panel { display: none !important; }
-    .story { grid-template-columns: 1fr; gap: 60px; padding: 80px 24px; }
-    .story-pull { position: static; }
-    .island { padding: 80px 24px; }
-    .island-inner { grid-template-columns: 1fr; gap: 48px; }
-    .experiences { padding: 80px 24px; }
-    .experiences-header { grid-template-columns: 1fr; gap: 24px; }
-    .exp-grid { grid-template-columns: 1fr; }
-    .exp-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
-    .videos { padding: 80px 24px; }
-    .videos-grid { grid-template-columns: 1fr; }
-    .how { padding: 80px 24px; }
-    .how-grid { grid-template-columns: 1fr; }
-    .people { padding: 80px 24px; }
-    .person { grid-template-columns: 1fr; gap: 40px; }
-    .box-section { padding: 80px 24px; }
-    .box-inner { grid-template-columns: 1fr; gap: 48px; }
-    .cta { padding: 100px 24px; }
-    .footer { padding: 40px 24px 0; }
-    .hero-cta-group { flex-direction: column; }
+
+    /* STORY */
+    .story { grid-template-columns: 1fr; gap: 48px; padding: 64px 20px; }
+    .story-pull { position: static; border-left-width: 2px; padding-left: 20px; }
+    .story-pull-quote { font-size: clamp(20px, 5vw, 28px); }
+    .story-pull-detail { flex-direction: row; flex-wrap: wrap; gap: 24px; }
+    .divider { margin: 40px 0; }
+
+    /* ISLAND */
+    .island { padding: 64px 20px; }
+    .island-inner { grid-template-columns: 1fr; gap: 40px; }
+    .island-facts { grid-template-columns: 1fr 1fr; gap: 2px; }
+    .island-image { aspect-ratio: 16/9; }
+
+    /* EXPERIENCES */
+    .experiences { padding: 64px 20px; }
+    .experiences-header { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+    .exp-grid { grid-template-columns: 1fr; gap: 2px; }
+    .exp-card { padding: 32px 24px; }
+    .exp-card.featured { grid-column: span 1; grid-template-columns: 1fr; gap: 0; }
+    .exp-card.featured .exp-card-image { aspect-ratio: 16/9; min-height: unset; }
+    .exp-num { font-size: 56px; margin-bottom: 12px; }
+
+    /* VIDEOS */
+    .videos { padding: 64px 20px; }
+    .videos-grid { grid-template-columns: 1fr; gap: 2px; }
+
+    /* HOW */
+    .how { padding: 64px 20px; }
+    .how-grid { grid-template-columns: 1fr; gap: 2px; }
+    .how-card { padding: 32px 24px; }
+    .how-card-num { font-size: 48px; }
+
+    /* PEOPLE */
+    .people { padding: 64px 20px; }
+    .person { grid-template-columns: 1fr; gap: 32px; padding: 48px 0; }
+    .person-image { aspect-ratio: 4/3; max-height: 360px; }
+    .person-name { font-size: clamp(28px, 7vw, 44px); }
+
+    /* BOX */
+    .box-section { padding: 64px 20px; }
+    .box-inner { grid-template-columns: 1fr; gap: 40px; }
+    .box-image { aspect-ratio: 4/3; }
+
+    /* CTA */
+    .cta { padding: 80px 20px; }
+    .cta-title { font-size: clamp(32px, 8vw, 52px); }
+    #form-wrap input, #form-wrap textarea { font-size: 16px; } /* prevents iOS zoom */
+
+    /* FOOTER */
+    .footer { padding: 40px 20px 0; flex-direction: column; align-items: flex-start; gap: 20px; }
+    .footer-main { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .footer-links { gap: 20px; }
+    .ollidays-footer { padding: 24px 20px 32px; }
+
+    /* OLLIDAYS */
+    .ollidays-badge { padding: 10px 16px; gap: 12px; }
   }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--cream); }
+  .nav-mobile { display: none; position: fixed; inset: 0; background: rgba(13,13,13,0.98); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+  .nav-mobile.open { display: flex; }
+  .nav-mobile a { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; color: var(--cream); text-decoration: none; letter-spacing: .1em; }
+  .nav-mobile a:hover { color: var(--gold); }
+  .nav-mobile-close { position: absolute; top: 24px; right: 24px; font-size: 32px; color: var(--cream); cursor: pointer; background: none; border: none; line-height: 1; }
+  @media (max-width: 900px) { .nav-hamburger { display: flex; } }
 </style>
 </head>
 <body>
@@ -221,7 +276,18 @@
     <a href="#how">How it works</a>
     <a href="#contact">Start a conversation</a>
   </div>
+  <button class="nav-hamburger" onclick="document.getElementById('nav-mobile').classList.add('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <button class="nav-mobile-close" onclick="document.getElementById('nav-mobile').classList.remove('open')" aria-label="Close menu">×</button>
+  <a href="#experiences" onclick="document.getElementById('nav-mobile').classList.remove('open')">Experiences</a>
+  <a href="#people" onclick="document.getElementById('nav-mobile').classList.remove('open')">Who we are</a>
+  <a href="#how" onclick="document.getElementById('nav-mobile').classList.remove('open')">How it works</a>
+  <a href="#contact" onclick="document.getElementById('nav-mobile').classList.remove('open')">Start a conversation</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
